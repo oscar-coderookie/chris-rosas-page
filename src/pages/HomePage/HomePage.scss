@@ -1,0 +1,17 @@
+.homepage{
+    overflow:hidden;
+    height: calc(100vh - 80px);
+
+
+    &__video{
+        width: 100%;
+        
+    }
+    &__title{
+        color: white; 
+        margin-top:0;
+        
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}

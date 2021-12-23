@@ -1,0 +1,27 @@
+.header{
+    &__nav{
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__icons{
+        color: white;
+        margin: 0px 4px;
+      
+    }
+    &__links{
+        text-decoration: none;
+        color:white;
+        text-transform: uppercase;
+        margin: 0px 6px;
+        font-size:14px;
+        height: 30px;
+        transition: all 0.2s ease;
+
+        &:hover{
+            border-bottom: 3px solid white;
+        }
+    }
+}
