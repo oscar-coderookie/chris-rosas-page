@@ -1,5 +1,11 @@
 .app {
   text-align: center;
   background-color: black;
+  position: relative;
 }
-
+.whatsapp{
+  height:60px;
+  position:absolute;
+  bottom: 10px;
+  right: 10px;
+}

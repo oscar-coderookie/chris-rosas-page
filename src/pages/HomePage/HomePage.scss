@@ -5,13 +5,19 @@
 
     &__video{
         width: 100%;
+        transform: translateY(-100px);
         
     }
-    &__title{
-        color: white; 
-        margin-top:0;
-        
-        font-weight: 400;
-        text-transform: uppercase;
+
+    @media (max-width: 1024px){
+
+        &__video{
+            transform: translateY(0)
+        }
+    }
+    @media (max-width: 768px) {
+        &__video{
+            transform: translateY(100px)
+        }
     }
 }
