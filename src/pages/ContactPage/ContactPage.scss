@@ -1,0 +1,38 @@
+.contact-page{
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__title{
+        color:white;
+        margin-top: 0;
+        font-weight: 500;
+    }
+    &__email{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h4{
+            font-weight: 300;
+            width: 80%;
+        }
+
+        p{
+            margin: 0px;
+            margin-bottom: 6px;
+
+        }
+        span{
+            font-size: 40px;
+            color: white;
+            margin-top: 10px;
+            transition: all .2s ease;
+            margin-bottom: 10px;
+            &:hover{
+                color:rgb(251, 255, 35);
+            }
+        }
+    }
+}

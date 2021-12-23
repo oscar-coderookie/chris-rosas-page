@@ -1,7 +1,8 @@
 import "./App.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
-import Header from "./components/Header/Header";
+import ContactPage from "./pages/ContactPage/ContactPage";
+import {Header} from "./components";
 import whatsappLogo from "./assets/img/whatsapp-logo.svg";
 
 function App() {
@@ -12,6 +13,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <HomePage />
+          </Route>
+          <Route exact path="/contact">
+            <ContactPage />
           </Route>
         </Switch>
         <a href="https://api.whatsapp.com/send?phone=+34722355841" target="_blank" rel="noopener noreferrer">
