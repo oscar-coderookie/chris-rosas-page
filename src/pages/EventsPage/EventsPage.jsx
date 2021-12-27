@@ -4,7 +4,7 @@ import './EventsPage.scss';
 const EventsPage = () => {
     return (
         <div className='events-page'>
-            
+            Próximamente.....coming soon.....
         </div>
     )
 }

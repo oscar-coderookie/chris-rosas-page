@@ -1,11 +1,13 @@
 .homepage{
     overflow:hidden;
     height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 
     &__video{
         width: 100%;
-        transform: translateY(-100px);
         
     }
 
@@ -17,7 +19,8 @@
     }
     @media (max-width: 768px) {
         &__video{
-            transform: translateY(100px)
+            width: 550px;
+            transform: translateY(-30px)
         }
     }
 }

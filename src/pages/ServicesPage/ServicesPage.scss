@@ -1,0 +1,41 @@
+.services-page{
+    background-image: url('./../../assets/img/services-img.jpg');
+    height: calc(100vh - 80px);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__title{
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 24px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    &__block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__list{
+        list-style: none;
+        padding: 0;
+    }
+    &__element{
+        font-size: 20px;
+        margin: 20px 10px;
+        padding: 14px;
+        font-weight: 200;
+        filter: drop-shadow(1px 1px 3px 2px black);
+        background: rgba(102, 102, 102, 0.32);
+    }
+
+    @media (max-width: 575px){
+        height: calc(100vh - 60px);
+    }
+}
