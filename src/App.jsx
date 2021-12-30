@@ -5,7 +5,7 @@ import ContactPage from "./pages/ContactPage/ContactPage";
 import Bio from "./pages/Bio/Bio";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import EventsPage from "./pages/EventsPage/EventsPage";
-import { Header } from "./components";
+import { Header, TraductionFlags } from "./components";
 import CookieConsent from "react-cookie-consent";
 import whatsappLogo from "./assets/img/whatsapp-logo.svg";
 
@@ -14,6 +14,7 @@ function App() {
     <Router>
       <div className="app">
         <Header />
+        <TraductionFlags className="app__traduction"/>
         <Switch>
           <Route exact path="/">
             <HomePage />
