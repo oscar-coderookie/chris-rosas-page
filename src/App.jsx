@@ -14,7 +14,7 @@ function App() {
     <Router>
       <div className="app">
         <Header />
-        <TraductionFlags className="app__traduction"/>
+        <TraductionFlags/>
         <Switch>
           <Route exact path="/">
             <HomePage />

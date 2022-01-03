@@ -1,0 +1,17 @@
+{
+  "header": {
+    "home": "Home",
+    "services": "Services",
+    "bio": "Bio",
+    "events": "Events",
+    "contact": "Contact"
+  },
+  "contact-page": {
+    "contact": "Contact",
+    "legend": "If you are interested in my services as a manager, do not hesitate to contact me by any of the following ways:",
+    "email": "Leave me an email",
+    "social": "Or any of my social networks",
+    "malaga" : "29010, Málaga Spain"
+
+  }
+}
