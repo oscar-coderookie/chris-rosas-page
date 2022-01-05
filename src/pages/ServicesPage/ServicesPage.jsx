@@ -1,30 +1,34 @@
 import React from "react";
 import "./ServicesPage.scss";
+import { useTranslation } from "react-i18next";
 
 const ServicesPage = () => {
+
+  const [t, i18n] = useTranslation("global")
+
   return (
     <div className="services-page">
       <div className="services-page__block">
-        <h1 className="services-page__title">Servicios</h1>
+        <h1 className="services-page__title">{t("services-page.services-title")}</h1>
 
         <ul className="services-page__list">
           <li className="services-page__element">
-          Booking
+          {t("services-page.booking")}
           </li>
           <li className="services-page__element">
-          Management
+          {t("services-page.management")}
           </li>
           <li className="services-page__element">
-          Production
+          {t("services-page.production")}
           </li>
           <li className="services-page__element">
-          Mixing and Mastering
+          {t("services-page.mixing")}
           </li>
           <li className="services-page__element">
-          Vocal Production
+          {t("services-page.vocal")}
           </li>
           <li className="services-page__element">
-          Songwriting and Composition
+          {t("services-page.sonwriting")}
           </li>
         </ul>
       </div>

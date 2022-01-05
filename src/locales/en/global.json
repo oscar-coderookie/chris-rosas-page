@@ -13,5 +13,14 @@
     "social": "Or any of my social networks",
     "malaga" : "29010, Málaga Spain"
 
+  },
+  "services-page": {
+    "services-title": "Services",
+    "booking": "Booking",
+    "management": "Management",
+    "production": "Production",
+    "mixing": "Mixing & Mastering",
+    "vocal": "Vocal Production",
+    "sonwriting": "Songwriting & Composition"
   }
 }

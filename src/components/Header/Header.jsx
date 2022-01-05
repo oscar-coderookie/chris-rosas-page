@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <div className="header">
-      <nav class="header__nav">
+      <nav className="header__nav">
         {ubication === "/" ? null : (
           <NavLink exact to="/" className="header__links">
             <span className="header__icons fas fa-home"></span>{t("header.home")}

@@ -12,5 +12,14 @@
     "email": "Déjame un correo electrónico",
     "social": "O en cualquiera de mis redes sociales",
     "malaga" : "29010, Málaga España"
+  },
+  "services-page": {
+    "services-title": "Servicios",
+    "booking": "Contrataciones",
+    "management": "Gestión",
+    "production": "Producción",
+    "mixing": "Mezcla y Masterización",
+    "vocal": "Producción vocal",
+    "sonwriting": "Composicíon y escritura de canciones"
   }
 }
