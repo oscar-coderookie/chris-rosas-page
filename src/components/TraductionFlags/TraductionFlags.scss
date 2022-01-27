@@ -8,17 +8,18 @@
         border: none;
         background: none;
         cursor: pointer;
-        width: 100%;
+        margin: 0;
     }
 
     img{
         width: 40px;
-        margin: 8px;
+        margin: 4px 0px; 
     }
 
     @media (max-width: 650px ){
         bottom: 10px;
-        left: 10px;
+        left: 6px;
         top: inherit;
+        margin: 0;
     }
 }
