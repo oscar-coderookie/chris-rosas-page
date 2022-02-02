@@ -4,7 +4,8 @@
     "services": "Services",
     "bio": "Bio",
     "events": "Events",
-    "contact": "Contact"
+    "contact": "Contact",
+    "artists": "Artists"
   },
   "contact-page": {
     "contact": "Contact",

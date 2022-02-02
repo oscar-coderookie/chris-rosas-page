@@ -27,6 +27,11 @@ const Header = () => {
             <span className="header__icons fas fa-compact-disc"></span>{t("header.services")}
           </NavLink>
         )}
+        {ubication === "/artists" ? null : (
+          <NavLink to="/artists" className="header__links">
+            <span className="header__icons fas fa-music"></span>{t('header.artists')}
+          </NavLink>
+        )}
         {ubication === "/events" ? null : (
           <NavLink to="/events" className="header__links">
             <span className="header__icons far fa-calendar-alt"></span>{t('header.events')}

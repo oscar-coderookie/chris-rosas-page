@@ -1,6 +1,9 @@
 .contact-page{
     height: calc(100vh - 80px);
     display: flex;
+    width: 100%;
+    background:url('../../assets/img/background-neon-2.jpg');
+    background-size: cover;
     flex-direction: column;
     justify-content: center;
 

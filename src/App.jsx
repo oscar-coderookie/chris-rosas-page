@@ -2,6 +2,10 @@ import "./App.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import ContactPage from "./pages/ContactPage/ContactPage";
+import ArtistsPage from "./pages/Artists/ArtistsPage";
+import DaddyYankee from "./pages/DaddyYankee/DaddyYankee";
+import ÑengoFlow from "./pages/ÑengoFlow/ÑengoFlow";
+import NattiNatasha from "./pages/NattiNatasha/NattiNatasha";
 import Bio from "./pages/Bio/Bio";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import EventsPage from "./pages/EventsPage/EventsPage";
@@ -14,7 +18,7 @@ function App() {
     <Router>
       <div className="app">
         <Header />
-        <TraductionFlags/>
+        <TraductionFlags />
         <Switch>
           <Route exact path="/">
             <HomePage />
@@ -26,10 +30,22 @@ function App() {
             <Bio />
           </Route>
           <Route exact path="/services">
-            <ServicesPage/>
+            <ServicesPage />
           </Route>
           <Route exact path="/events">
-            <EventsPage/>
+            <EventsPage />
+          </Route>
+          <Route exact path="/artists">
+            <ArtistsPage />
+          </Route>
+          <Route exact path="/daddy-yankee">
+            <DaddyYankee />
+          </Route>
+          <Route exact path="/ñengo">
+            <ÑengoFlow />
+          </Route>
+          <Route exact path="/natti">
+            <NattiNatasha />
           </Route>
         </Switch>
         <a

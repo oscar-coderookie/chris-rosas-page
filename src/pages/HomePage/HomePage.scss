@@ -43,6 +43,13 @@
     }
     @media (max-width: 768px) {
         height: calc(100vh - 60px);
+        background: url('../../assets/img/bkg_home_mobile.jpg');
+        background-position: center;
+        background-size: cover;
+
+        &__logo{
+            width: 80%;
+        }
 
         &__video{
             width: 550px;
