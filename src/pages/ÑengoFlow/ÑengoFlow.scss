@@ -1,7 +1,21 @@
+.ñengo-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .ñengo-flow{
     height: calc(100vh - 80px);
     background: url('./../../assets/img/ñengo-desktop.png') no-repeat;
     width: 100%;
     background-size: cover;
     background-position:center ;
+
+    @media (max-width: 425px) {
+        background: url('./../../assets/img/ñengo-mobile.jpg') no-repeat;
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position-y: -70px;
+    }
 }

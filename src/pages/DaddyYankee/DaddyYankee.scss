@@ -1,7 +1,22 @@
-.daddy-yankee{
+.daddy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-yankee {
     height: calc(100vh - 80px);
-    background: url('./../../assets/img/daddy-desktop.jpg') no-repeat;
+    background: url("./../../assets/img/daddy-desktop.jpg") no-repeat;
     width: 100%;
     background-size: cover;
-    background-position:center ;
+    background-position: center;
+
+    @media (max-width: 425px) {
+        background: url("./../../assets/img/daddy-mobile.jpg") no-repeat;
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position-y: -70px;
+      }
+  }
+ 
+  
 }

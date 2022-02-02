@@ -17,6 +17,7 @@ const ArtistsPage = () => {
               src={daddyAvatar}
               alt="daddy-avatar"
             />
+            <h2 className="artists-page__img-legend">Daddy Yankee</h2>
           </div>
         </NavLink>
 
@@ -27,6 +28,7 @@ const ArtistsPage = () => {
               src={ñengoAvatar}
               alt="ñengo-avatar"
             />
+            <h2 className="artists-page__img-legend">Ñengo Flow</h2>
           </div>
         </NavLink>
         <NavLink exact to="/natti">
@@ -36,6 +38,7 @@ const ArtistsPage = () => {
               src={nattiAvatar}
               alt="natti-avatar"
             />
+            <h2 className="artists-page__img-legend">Natti Natasha</h2>
           </div>
         </NavLink>
       </div>

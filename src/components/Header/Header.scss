@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__logo {
@@ -39,15 +40,17 @@
       border-bottom: 3px solid white;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 908px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column-reverse;
+    flex-wrap: wrap;
 
-    &__logo{
-      top:0; 
-      left: 0;
+    &__logo {
+      position: inherit;
+      width: 200px;
+      margin-top: 10px;
     }
 
   }

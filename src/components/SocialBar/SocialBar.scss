@@ -1,0 +1,51 @@
+.social-bar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 30px 0px;
+  width: 80%;
+
+  &__title{
+      color: #d3faff;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-top: 0;
+  }
+
+  &__block {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    width: 600px;
+    margin-bottom: 40px;
+
+    @media (max-width: 425px) {
+        width: 100%;
+      }
+  }
+  &__icon {
+    font-size: 60px;
+    color: #d3faff;
+    filter: drop-shadow(0px 0px 2px #c0f8ff);
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      filter: drop-shadow(0px 0px 8px #c0f8ff);
+    }
+  }
+  &__legend {
+    margin: 0;
+    margin-top: 10px;
+    color: #d3faff;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 425px) {
+      &__icon{
+          font-size: 40px;
+      }
+  }
+ 
+}
