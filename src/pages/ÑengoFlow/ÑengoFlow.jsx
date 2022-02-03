@@ -1,5 +1,5 @@
 import React from "react";
-import { SocialBar } from "../../components";
+import { GalleryArtists, SocialBar } from "../../components";
 import "./ÑengoFlow.scss";
 
 const ÑengoFlow = () => {
@@ -14,6 +14,7 @@ const ÑengoFlow = () => {
         igLink="https://www.instagram.com/nengoflowofficial/?hl=es"
         spotyLink="https://open.spotify.com/artist/12vb80Km0Ew53ABfJOepVz"
       />
+      <GalleryArtists/>
     </div>
   );
 };
