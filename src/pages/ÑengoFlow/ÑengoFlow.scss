@@ -1,6 +1,9 @@
 .ñengo-block{
     display: flex;
     flex-direction: column;
+    background: url(./../../assets/img/background-neon-2.jpg);
+    width: 100%;
+    background-size: cover;
     align-items: center;
     justify-content: center;
 }
