@@ -9,7 +9,7 @@ import NattiNatasha from "./pages/NattiNatasha/NattiNatasha";
 import Bio from "./pages/Bio/Bio";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import EventsPage from "./pages/EventsPage/EventsPage";
-import { Header, TraductionFlags } from "./components";
+import { Header} from "./components";
 import CookieConsent from "react-cookie-consent";
 import whatsappLogo from "./assets/img/whatsapp-logo.svg";
 
@@ -18,7 +18,7 @@ function App() {
     <Router>
       <div className="app">
         <Header />
-        <TraductionFlags />
+        
         <Switch>
           <Route exact path="/">
             <HomePage />

@@ -31,7 +31,7 @@
     &__img-container{
         overflow: hidden;
         margin: 20px 10px;
-        width: 330px;
+        width: 300px;
         object-position: center;
         height: 300px;
         border: 4px double rgb(174, 216, 255);
@@ -75,5 +75,10 @@
 
     @media (max-width: 1024px) {
         height: auto;
+    }
+    @media (max-width: 425px) {
+        &__container{
+            margin-bottom: 60px;
+        }
     }
 }

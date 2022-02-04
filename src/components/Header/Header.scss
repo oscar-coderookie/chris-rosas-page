@@ -1,7 +1,16 @@
 .header {
-  background: linear-gradient( 180deg, rgba(0, 0, 0, 0.986), rgba(0, 0, 0, 0.082));
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.986),
+    rgba(0, 0, 0, 0.082)
+  );
   position: relative;
 
+  &__block {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
   &__nav {
     height: 80px;
     display: flex;
@@ -52,11 +61,9 @@
       width: 200px;
       margin-top: 10px;
     }
-
   }
   @media (max-width: 575px) {
-
-    &__nav{
+    &__nav {
       height: 60px;
     }
     &__links {

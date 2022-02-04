@@ -3,6 +3,7 @@ import "./Header.scss";
 import { NavLink, withRouter } from "react-router-dom";
 import logo from "../../assets/img/logo-blanco.png";
 import { useTranslation } from "react-i18next";
+import { TraductionFlags } from "..";
 
 const Header = () => {
   const [t, i18n] = useTranslation("global")
@@ -44,11 +45,16 @@ const Header = () => {
           </NavLink>
         )}
       </nav>
+
+      <div className="header__block">
       {ubication === "/" ? null : (
         <div className="header__logo">
           <img src={logo} alt="logo-chris" />
         </div>
       )}
+      <TraductionFlags/>
+      </div>
+      
     </div>
   );
 };
