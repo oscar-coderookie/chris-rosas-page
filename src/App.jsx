@@ -20,7 +20,7 @@ import whatsappLogo from "./assets/img/whatsapp-logo.svg";
 function App() {
   const [breakpoint, setBreakpoint] = useState(true);
   const handleWindowResize = () => {
-    if (window.innerWidth > 475) {
+    if (window.innerWidth > 520) {
       setBreakpoint(true);
     } else {
       setBreakpoint(false);
@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     window.addEventListener("resize", handleWindowResize);
-    if (window.innerWidth > 475) {
+    if (window.innerWidth > 520) {
       setBreakpoint(true);
     } else {
       setBreakpoint(false);
@@ -108,6 +108,7 @@ function App() {
             mayor información.
           </CookieConsent>
         )}
+       
       </div>
     </Router>
   );

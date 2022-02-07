@@ -17,9 +17,9 @@
     align-items: center;
     justify-content: space-between;
     display: flex;
-    width: 600px;
+    width: 60%;
 
-    @media (max-width: 425px) {
+    @media (max-width: 675px) {
         width: 100%;
       }
   }

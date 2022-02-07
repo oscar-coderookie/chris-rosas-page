@@ -5,6 +5,8 @@ import TraductionFlags from "./TraductionFlags/TraductionFlags";
 import SocialBar from "./SocialBar/SocialBar";
 import GalleryArtists from "./GalleryArtists/GalleryArtists";
 import MenuMobile from "./MenuMobile/MenuMobile";
+import LanguageSelector from "./LanguageSelector/LanguageSelector";
+import ArtistsBio from "./ArtistsBio/ArtistsBio";
 
 export {
   Header,
@@ -14,4 +16,6 @@ export {
   SocialBar,
   GalleryArtists,
   MenuMobile,
+  LanguageSelector,
+  ArtistsBio
 };

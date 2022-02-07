@@ -33,7 +33,10 @@ const Header = () => {
             <span className="header__icons fas fa-compact-disc"></span>{t("header.services")}
           </NavLink>
         )}
-        {ubication === "/artists" ? null : (
+        {ubication === "/artists" ||
+        ubication === "/natti" ||
+        ubication === "/daddy-yankee" ||
+        ubication === "/nengo" ? null : (
           <NavLink to="/artists" className="header__links">
             <span className="header__icons fas fa-music"></span>{t('header.artists')}
           </NavLink>

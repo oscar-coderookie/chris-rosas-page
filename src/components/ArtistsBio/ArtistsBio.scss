@@ -1,0 +1,32 @@
+.artists-bio{
+    background: rgb(0, 0, 0);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &__title{
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+        color: #d3faff;
+    }
+    &__text{
+        text-align: justify;
+        width: 80%;
+        color:#d3faff;
+
+        @media (max-width: 475px) {
+            width: 100%;
+        }
+    }
+}
+
+.bio-paragraph{
+    text-align: justify;
+    color:#d3faff;
+}
+.bio-carousel{
+    margin: 0px 0px 20px 0px;
+}

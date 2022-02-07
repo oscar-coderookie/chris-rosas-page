@@ -19,18 +19,17 @@
     width: 100%;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 
     @media (max-width: 425px) {
       background: url("./../../assets/img/ñengo-mobile.jpg") no-repeat;
-      height: 100vh;
+      height: 85vh;
       width: 100%;
       background-size: cover;
-      background-position-y: -70px;
+      background-attachment: fixed;
     }
   }
-  &-gallery{
-      margin-bottom: 40px;
-  }
+
   &-flow__bio{
     background: url(./../../assets/img/background-neon-2.jpg);
     width: 100%;

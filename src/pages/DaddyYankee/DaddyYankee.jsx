@@ -1,5 +1,5 @@
 import React from "react";
-import { SocialBar, GalleryArtists } from "../../components";
+import { SocialBar, GalleryArtists, ArtistsBio } from "../../components";
 import "./DaddyYankee.scss";
 
 const images = [
@@ -49,7 +49,21 @@ const DaddyYankee = () => {
         spotyLink="https://open.spotify.com/artist/4VMYDCV2IEDYJArk749S6m"
 
       />
-      <GalleryArtists images={images} />
+      <GalleryArtists images={images}/>
+      <ArtistsBio
+      className="daddy-yankee__bio"
+      name="Daddy Yankee"
+      text1="A los 18 años, Daddy Yankee hizo su primer proyecto oficial, titulado No Mercy (1995), con el apoyo de DJ Playero, quien se convirtió en un gran amigo y uno de los promotores de su carrera. Iniciando el nuevo milenio, Yankee incursionó como productor; El cartel: los intocables (1997) y El cartel II: los Cangris (2001).  Sus letras se inspiraban en los ambientes conflictivos de su barrio, Río Piedras, antigua municipalidad anexionada a la capital, San Juan de Puerto Rico. Realmente, nunca fue un joven aplicado y entregado a la escuela, antes de querer ser cantante quería dedicarse al béisbol. En su tiempo libre bailaba break dance.
+
+      Con DJ Playero aprendió a mezclar en estudio ritmos de reggae y de hip hop. DJ Playero sabía que Daddy tenía grandes aptitudes para el rap, las grabaciones caseras fueron muy populares entre los jóvenes de la isla. Un tema interpretado por el joven debutante se tituló Persígueme, no te detengas. Para ese momento se encontraba casado con Mireddys González, y de esta unión nació su primer hijo. Tuvo un problema en su barrio y fue herido con una bala en su fémur, estuvo en recuperación durante un año. Como consecuencia no pudo pensar más en ser un beisbolista. Conoció a Nico Canada un productor, que logró impulsar su carrera. Desde este momento firmó como Daddy Yankee."
+      text2=" 
+      Este artista se ha caracterizado por estar abierto a recibir otras tendencias, interesado en la evolución de su música. Por ejemplo, con El Cartel: The Big Boss (2007) realizó varias mezclas de hip hop. Daddy Yankee superó a los más multitudinarios artistas de los géneros latinos tradicionales en relación a la asistencia a sus conciertos, eran realmente multitudinarios. Fue contactada para ser el protagonista de la película Talento de Barrio (2008), no solo actuó, sino que también compuso la banda sonora homónima. El filme refleja las duras condiciones de vida de los barrios marginales puertorriqueños en que creció el propio Yankee.
+      Lanzó un álbum llamado Mundial (2010), en este se acercó a un género muy popular en su país el merengue. Con la gira de Prestige (2012) reafirmó su posición en el mundo del reggaetón y reafirmó a sus colegas y a los fanáticos del reggaetón porque es el Daddy o el Cangry como muchos lo llamaban. El mencionado disco fue disco de oro, algunas de sus canciones alcanzaron la primera posición en las listas Billboard, como Lovumba, nominado Grammy latinos y Limbo. En 2015 se llevó a cabo el lanzamiento de King Daddy II, aquí predominó el género urbano."
+
+      text3="En su etapa de madurez el reggaetonero no ha dudado en defender este género frente a quienes lo asociaron con la delincuencia. Daddy Yankee ha desarrollado varias iniciativas altruistas como la fundación Corazón Guerrero, dedicada a la reinserción de presos. En el transcurso de su carrera ha sido nombrado de muchas maneras y todas apuntan a exaltar su puesto en este género relativamente nuevo. Es conocido como el «Rey de la Improvisación» por su habilidad creativa, por esto ha ganado durante cinco años consecutivos el Street Jam Reggae Awards.
+      
+      Actualmente la carrera de Daddy Yankee ha tenido mucho éxito y ha logrado colaboraciones con importantes cantantes como Luis Fonsi, con quien lanzó la canción Despacito, recibieron varios premios. Uno de ellos fue entregado en los Premios Billboard Latino 2018; Canción del Año, Canción del Año Airway y Canción del Año Digital fueron algunos de los reconocimientos que recibieron. Otra de los temas más populares actualmente es Dura. Ha sido una sensación a nivel mundial."
+      />
     </div>
   );
 };

@@ -12,10 +12,12 @@ const MenuMobile = () => {
 
   return (
     <div className="menu-mobile">
-      <div className="menu-mobile__header">
-        <img className="menu-mobile__logo" src={logo} alt="logo" />
-        <TraductionFlags className="menu-mobile__flags" />
-      </div>
+      {ubication === "/" ? null : (
+        <div className="menu-mobile__header">
+          <img className="menu-mobile__logo" src={logo} alt="logo" />
+          <TraductionFlags className="menu-mobile__flags" />
+        </div>
+      )}
       <nav className="menu-mobile__nav">
         {ubication === "/" ? null : (
           <NavLink exact to="/" className="menu-mobile__links">
