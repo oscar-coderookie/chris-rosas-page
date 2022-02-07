@@ -26,11 +26,11 @@
   &__icon {
     font-size: 60px;
     color: #d3faff;
-    filter: drop-shadow(0px 0px 2px #c0f8ff);
+    filter: drop-shadow(0px 0px 6px #c0f8ff);
     transition: all 0.2s ease-in;
 
     &:hover {
-      filter: drop-shadow(0px 0px 8px #c0f8ff);
+      filter: drop-shadow(0px 0px 12px #c0f8ff);
     }
   }
   &__legend {

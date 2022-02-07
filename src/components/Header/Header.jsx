@@ -12,6 +12,11 @@ const Header = () => {
 
   return (
     <div className="header">
+    {ubication === "/" ? null : (
+      <div className="header__logo">
+        <img src={logo} alt="logo-chris" />
+      </div>
+    )}
       <nav className="header__nav">
         {ubication === "/" ? null : (
           <NavLink exact to="/" className="header__links">
@@ -46,14 +51,10 @@ const Header = () => {
         )}
       </nav>
 
-      <div className="header__block">
-      {ubication === "/" ? null : (
-        <div className="header__logo">
-          <img src={logo} alt="logo-chris" />
-        </div>
-      )}
+   
+      
       <TraductionFlags/>
-      </div>
+   
       
     </div>
   );

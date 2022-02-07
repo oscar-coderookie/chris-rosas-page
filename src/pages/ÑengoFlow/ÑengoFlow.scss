@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   &-flow__title{
@@ -33,6 +34,10 @@
   &-flow__bio{
     background: url(./../../assets/img/background-neon-2.jpg);
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-size: cover;
     padding-bottom: 40px;
   }

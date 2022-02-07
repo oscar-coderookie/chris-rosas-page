@@ -1,6 +1,5 @@
 import React from "react";
 import "./TraductionFlags.scss";
-import i18n from 'i18next';
 import { useTranslation } from "react-i18next";
 import spain from "./../../assets/img/spain.png";
 import uk from "./../../assets/img/uk.png";

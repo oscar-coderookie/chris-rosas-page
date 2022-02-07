@@ -21,7 +21,7 @@ const ArtistsPage = () => {
           </div>
         </NavLink>
 
-        <NavLink exact to="/ñengo">
+        <NavLink exact to="/nengo">
           <div className="artists-page__img-container">
             <img
               className="artists-page__img"

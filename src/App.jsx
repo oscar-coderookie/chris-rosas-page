@@ -1,4 +1,5 @@
 import "./App.scss";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import ContactPage from "./pages/ContactPage/ContactPage";
@@ -9,16 +10,40 @@ import NattiNatasha from "./pages/NattiNatasha/NattiNatasha";
 import Bio from "./pages/Bio/Bio";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import EventsPage from "./pages/EventsPage/EventsPage";
-import { Header} from "./components";
-import CookieConsent from "react-cookie-consent";
+import { Header, MenuMobile } from "./components";
+import CookieConsent, {
+  Cookies,
+  getCookieConsentValue,
+} from "react-cookie-consent";
 import whatsappLogo from "./assets/img/whatsapp-logo.svg";
 
 function App() {
+  const [breakpoint, setBreakpoint] = useState(true);
+  const handleWindowResize = () => {
+    if (window.innerWidth > 475) {
+      setBreakpoint(true);
+    } else {
+      setBreakpoint(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowResize);
+    if (window.innerWidth > 475) {
+      setBreakpoint(true);
+    } else {
+      setBreakpoint(false);
+    }
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
   return (
     <Router>
       <div className="app">
-        <Header />
-        
+        {!breakpoint ? <MenuMobile /> : null}
+        {breakpoint ? <Header /> : null}
         <Switch>
           <Route exact path="/">
             <HomePage />
@@ -41,7 +66,7 @@ function App() {
           <Route exact path="/daddy-yankee">
             <DaddyYankee />
           </Route>
-          <Route exact path="/ñengo">
+          <Route exact path="/nengo">
             <ÑengoFlow />
           </Route>
           <Route exact path="/natti">
@@ -55,17 +80,34 @@ function App() {
         >
           <img className="whatsapp" src={whatsappLogo} alt="whatsapp" />
         </a>
-        <CookieConsent
-          debug={true}
-          buttonText="Acepto"
-          style={{ background: "#383838" }}
-          buttonStyle={{ color: "black", fontSize: "12px" }}
-          enableDeclineButton
-          declineButtonText="No acepto"
-        >
-          Este sitio web usa cookies. Revisa la política de privacidad para
-          mayor información.
-        </CookieConsent>
+
+        {getCookieConsentValue === true ? null : (
+          <CookieConsent
+            debug={true}
+            buttonText="Acepto"
+            style={{ background: "#383838" }}
+            buttonStyle={{ color: "black", fontSize: "12px" }}
+            enableDeclineButton
+            hideOnAccept={true}
+            visible="byCookieValue"
+            expires={150}
+            declineButtonText="No acepto"
+            onDecline={() => {
+              alert("Vale!");
+            }}
+            onAccept={(acceptedByScrolling) => {
+              if (acceptedByScrolling) {
+                // triggered if user scrolls past threshold
+                alert("Accept was triggered by user scrolling");
+              } else {
+                alert("Aviso de cookies aceptado");
+              }
+            }}
+          >
+            Este sitio web usa cookies. Revisa la política de privacidad para
+            mayor información.
+          </CookieConsent>
+        )}
       </div>
     </Router>
   );

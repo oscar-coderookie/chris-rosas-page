@@ -1,0 +1,59 @@
+.menu-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+  &__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    
+  }
+  &__logo {
+    height: 100px;
+    margin-left: 8px;
+  }
+  &__nav {
+    margin: 10px 0px;
+    display: flex;
+  }
+
+  &__links {
+    text-decoration: none;
+    color: white;
+    margin: 0px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+
+    &:hover {
+      border-bottom: 2px solid white;
+    }
+  }
+  &__link-active {
+    color: gold;
+  }
+  &__icons {
+    font-size: 20px;
+    margin-right: 4px;
+  }
+
+  @media (max-width: 375px) {
+    &__nav{
+      margin: 8px 0px;
+    }
+    &__links {
+      height: 40px;
+      
+    }
+    &__icons {
+      margin: 2px;
+    }
+  }
+}
