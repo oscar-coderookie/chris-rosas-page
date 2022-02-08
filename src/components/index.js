@@ -7,6 +7,7 @@ import GalleryArtists from "./GalleryArtists/GalleryArtists";
 import MenuMobile from "./MenuMobile/MenuMobile";
 import LanguageSelector from "./LanguageSelector/LanguageSelector";
 import ArtistsBio from "./ArtistsBio/ArtistsBio";
+import SpinnerLoader from "./SpinnerLoader/SpinnerLoader";
 
 export {
   Header,
@@ -17,5 +18,6 @@ export {
   GalleryArtists,
   MenuMobile,
   LanguageSelector,
-  ArtistsBio
+  ArtistsBio,
+  SpinnerLoader
 };

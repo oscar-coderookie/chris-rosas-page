@@ -6,13 +6,25 @@
     align-items: center;
     justify-content: center;
 
+    &__icon{
+        width: 60px;
+    }
+    &__menu{
+        display: flex;
+    }
+
     &__menu-item{
         text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         color: white;
         margin: 10px;
 
         &:hover{
             border-bottom: 2px solid white;
+            color: #d3faff;
         }
     }
 }

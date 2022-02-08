@@ -1,5 +1,5 @@
 import "./App.scss";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import ContactPage from "./pages/ContactPage/ContactPage";
@@ -10,7 +10,7 @@ import NattiNatasha from "./pages/NattiNatasha/NattiNatasha";
 import Bio from "./pages/Bio/Bio";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import EventsPage from "./pages/EventsPage/EventsPage";
-import { Header, MenuMobile } from "./components";
+import { Header, MenuMobile, SpinnerLoader } from "./components";
 import CookieConsent, {
   Cookies,
   getCookieConsentValue,
@@ -47,44 +47,47 @@ function App() {
       <div className="app">
         {!breakpoint ? <MenuMobile /> : null}
         {breakpoint ? <Header /> : null}
-        <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route exact path="/contact">
-            <ContactPage />
-          </Route>
-          <Route exact path="/bio">
-            <Bio />
-          </Route>
-          <Route exact path="/services">
-            <ServicesPage />
-          </Route>
-          <Route exact path="/events">
-            <EventsPage />
-          </Route>
-          <Route exact path="/events/2019">
-            <Events2019 />
-          </Route>
-          <Route exact path="/events/2020">
-            <Events2020 />
-          </Route>
-          <Route exact path="/events/2021">
-            <Events2021 />
-          </Route>
-          <Route exact path="/artists">
-            <ArtistsPage />
-          </Route>
-          <Route exact path="/daddy-yankee">
-            <DaddyYankee />
-          </Route>
-          <Route exact path="/nengo">
-            <ÑengoFlow />
-          </Route>
-          <Route exact path="/natti">
-            <NattiNatasha />
-          </Route>
-        </Switch>
+        <Suspense fallback={<SpinnerLoader/>}>
+          <Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route exact path="/contact">
+              <ContactPage />
+            </Route>
+            <Route exact path="/bio">
+              <Bio />
+            </Route>
+            <Route exact path="/services">
+              <ServicesPage />
+            </Route>
+            <Route exact path="/events">
+              <EventsPage />
+            </Route>
+            <Route exact path="/events/2019">
+              <Events2019 />
+            </Route>
+            <Route exact path="/events/2020">
+              <Events2020 />
+            </Route>
+            <Route exact path="/events/2021">
+              <Events2021 />
+            </Route>
+            <Route exact path="/artists">
+              <ArtistsPage />
+            </Route>
+            <Route exact path="/daddy-yankee">
+              <DaddyYankee />
+            </Route>
+            <Route exact path="/nengo">
+              <ÑengoFlow />
+            </Route>
+            <Route exact path="/natti">
+              <NattiNatasha />
+            </Route>
+          </Switch>
+        </Suspense>
+
         <a
           href="https://api.whatsapp.com/send?phone=+34722355841"
           target="_blank"
@@ -104,23 +107,11 @@ function App() {
             visible="byCookieValue"
             expires={150}
             declineButtonText="No acepto"
-            onDecline={() => {
-              alert("Vale!");
-            }}
-            onAccept={(acceptedByScrolling) => {
-              if (acceptedByScrolling) {
-                // triggered if user scrolls past threshold
-                alert("Accept was triggered by user scrolling");
-              } else {
-                alert("Aviso de cookies aceptado");
-              }
-            }}
           >
             Este sitio web usa cookies. Revisa la política de privacidad para
             mayor información.
           </CookieConsent>
         )}
-       
       </div>
     </Router>
   );
