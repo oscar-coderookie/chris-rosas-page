@@ -16,6 +16,9 @@ import CookieConsent, {
   getCookieConsentValue,
 } from "react-cookie-consent";
 import whatsappLogo from "./assets/img/whatsapp-logo.svg";
+import Events2019 from "./pages/EventsPages/Events2019";
+import Events2020 from "./pages/EventsPages/Events2020";
+import Events2021 from "./pages/EventsPages/Events2021";
 
 function App() {
   const [breakpoint, setBreakpoint] = useState(true);
@@ -59,6 +62,15 @@ function App() {
           </Route>
           <Route exact path="/events">
             <EventsPage />
+          </Route>
+          <Route exact path="/events/2019">
+            <Events2019 />
+          </Route>
+          <Route exact path="/events/2020">
+            <Events2020 />
+          </Route>
+          <Route exact path="/events/2021">
+            <Events2021 />
           </Route>
           <Route exact path="/artists">
             <ArtistsPage />

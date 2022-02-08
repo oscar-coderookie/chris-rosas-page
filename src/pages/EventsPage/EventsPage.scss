@@ -1,6 +1,18 @@
 .events-page{
     height: calc(100vh - 80px);
+    background: url(../../assets/img/background-neon-2.jpg);
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &__menu-item{
+        text-decoration: none;
+        color: white;
+        margin: 10px;
+
+        &:hover{
+            border-bottom: 2px solid white;
+        }
+    }
 }

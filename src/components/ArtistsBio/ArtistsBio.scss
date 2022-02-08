@@ -1,6 +1,6 @@
 .artists-bio{
     background: rgb(0, 0, 0);
-    padding: 40px;
+    margin: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,6 +26,16 @@
 .bio-paragraph{
     text-align: justify;
     color:#d3faff;
+    width: 80%;
+}
+.bio-slide{
+    display: flex;
+    justify-content: center;
+    height: 250px;
+
+    @media (max-width: 475px) {
+        height: 500px;
+    }
 }
 .bio-carousel{
     margin: 0px 0px 20px 0px;

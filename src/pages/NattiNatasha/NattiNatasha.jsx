@@ -1,6 +1,7 @@
 import React from "react";
 import { SocialBar, GalleryArtists, ArtistsBio } from "../../components";
 import "./NattiNatasha.scss";
+import { text1, text2, text3 } from "../../mocks/natti";
 
 const images = [
   {
@@ -60,9 +61,9 @@ const NattiNatasha = () => {
       <GalleryArtists images={images} />
       <ArtistsBio
         name="Natti Natasha"
-        text1="Natalia Alexandra Gutiérrez Batista (10 de diciembre de 1986). Nació en Santiago de los Caballeros, República Dominicana. Cantante. Conocida como Natti Natasha artista dominicana de género urbano, pop latino y  bachata; actualmente trabaja con la Discográfica Pina Records.
-      El primer encuentro de Natalia con la música fue a través de la Iglesia de su comunidad, en esta la artista era parte de un grupo infantil que llevaba a cabo diferentes actividades culturales, el talento de la artista sobresalió, al  observar el talento y buen recibimiento de los dotes musicales de Natalia, sus padres deciden fomentar la pasión de su hija, razón por la cual a los 8 años la inscriben en la  Escuela de Bellas Artes de Santiago."
-        text2="Con el apoyo y la tutoría de Don Omar la artista se abre cambio por medio de la compilación “Love is pain”, en este álbum sale por primera vez su colaboración con Don Omar “Dutty Love”,  sencillo con el cual ganó tres premios Billboard Latinos; en 2012 Natalia firma contrato con Orfanato Music Group compañía dirigida por su mentor, con la cual sale su primer EP en ingles con el nombre All About Me, el éxito de la cantante la lleva a concluir su contrato con Don Omar en 2015, con este hace ultima colaboración con la canción “Perdido En Tus Ojos”,  la cual que sobrepasó los 100 millones de reproducciones en Vevo, además de ganar con esta un Disco de Platino en España."
+        text1={text1}
+        text2={text2}
+        text3={text3}
       />
     </div>
   );

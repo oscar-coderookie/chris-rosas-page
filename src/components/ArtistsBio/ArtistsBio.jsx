@@ -6,13 +6,13 @@ import { Carousel } from "react-responsive-carousel";
 const Biography = ({p1, p2, p3}) => {
   return (
     <Carousel className="bio-carousel" showStatus={false}>
-      <div>
+      <div className="bio-slide">
         <p className="bio-paragraph">{p1}</p>
       </div>
-      <div>
+      <div className="bio-slide">
         <p className="bio-paragraph">{p2}</p>
       </div>
-      <div>
+      <div className="bio-slide">
         <p className="bio-paragraph">{p3}</p>
       </div>
     </Carousel>

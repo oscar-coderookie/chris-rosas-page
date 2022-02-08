@@ -1,0 +1,13 @@
+.events-2020{
+
+    &__img{
+        height: calc(100vh - 80px);
+
+        img{
+           
+           object-fit: cover;
+        
+       
+        }
+    }
+}
