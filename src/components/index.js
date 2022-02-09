@@ -9,6 +9,7 @@ import LanguageSelector from "./LanguageSelector/LanguageSelector";
 import ArtistsBio from "./ArtistsBio/ArtistsBio";
 import SpinnerLoader from "./SpinnerLoader/SpinnerLoader";
 import NeonBanner from "./NeonBanner/NeonBanner";
+import EventsCarousel from "./EventsCarousel/EventsCarousel";
 
 export {
   Header,
@@ -21,5 +22,6 @@ export {
   LanguageSelector,
   ArtistsBio,
   SpinnerLoader,
-  NeonBanner
+  NeonBanner,
+  EventsCarousel
 };

@@ -1,5 +1,5 @@
-import "./App.scss";
 import React, { useState, useEffect, Suspense } from "react";
+import "./App.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import ContactPage from "./pages/ContactPage/ContactPage";
@@ -10,15 +10,21 @@ import NattiNatasha from "./pages/NattiNatasha/NattiNatasha";
 import Bio from "./pages/Bio/Bio";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import EventsPage from "./pages/EventsPage/EventsPage";
-import { Header, MenuMobile, SpinnerLoader } from "./components";
-import CookieConsent, {
-  Cookies,
-  getCookieConsentValue,
-} from "react-cookie-consent";
+import {
+  Header,
+  MenuMobile,
+  SpinnerLoader,
+  EventsCarousel,
+} from "./components";
+import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 import whatsappLogo from "./assets/img/whatsapp-logo.svg";
-import Events2019 from "./pages/EventsPages/Events2019";
-import Events2020 from "./pages/EventsPages/Events2020";
-import Events2021 from "./pages/EventsPages/Events2021";
+//**imports of slides images: */
+import natti from "./assets/img/events/natti-big-poster.jpg";
+import daddy from "./assets/img/events/daddy-event-big.jpg";
+import nengo from "./assets/img/events/nengo-big-poster.jpg";
+import nattiMobile from "./assets/img/events/natti-little-poster.jpg";
+import daddyMobile from "./assets/img/events/daddy-yankee-poster-little.jpg";
+import nengoMobile from "./assets/img/events/nengo-little-poster.jpg";
 
 function App() {
   const [breakpoint, setBreakpoint] = useState(true);
@@ -47,7 +53,7 @@ function App() {
       <div className="app">
         {!breakpoint ? <MenuMobile /> : null}
         {breakpoint ? <Header /> : null}
-        <Suspense fallback={<SpinnerLoader/>}>
+        <Suspense fallback={<SpinnerLoader />}>
           <Switch>
             <Route exact path="/">
               <HomePage />
@@ -65,13 +71,23 @@ function App() {
               <EventsPage />
             </Route>
             <Route exact path="/events/2019">
-              <Events2019 />
+              <EventsCarousel />
             </Route>
             <Route exact path="/events/2020">
-              <Events2020 />
+              <EventsCarousel
+                natti={natti}
+                nattiMobile={nattiMobile}
+                daddy={daddy}
+                daddyMobile={daddyMobile}
+                nengo={nengo}
+                nengoMobile={nengoMobile}
+              />
             </Route>
             <Route exact path="/events/2021">
-              <Events2021 />
+              <EventsCarousel />
+            </Route>
+            <Route exact path="/events/2022">
+              <EventsCarousel />
             </Route>
             <Route exact path="/artists">
               <ArtistsPage />

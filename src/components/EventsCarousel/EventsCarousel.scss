@@ -1,0 +1,17 @@
+.events {
+    &__img {
+      height: calc(100vh - 80px);
+      
+      @media (max-width: 475px) {
+        margin-top: 10px;
+        height: calc(100vh - 60px);
+      }
+  
+      img {
+        display: flex;
+        align-items: center;
+        object-fit: cover;
+      }
+    }
+  }
+  
