@@ -1,9 +1,9 @@
 .artists-bio{
     background: rgb(0, 0, 0);
-    margin: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 40px;
     flex-direction: column;
     &__title{
         font-size: 24px;

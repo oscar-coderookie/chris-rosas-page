@@ -1,16 +1,16 @@
 import React from "react";
 import "./ServicesPage.scss";
 import { useTranslation } from "react-i18next";
+import { NeonBanner } from "../../components";
 
 const ServicesPage = () => {
 
   const [t, i18n] = useTranslation("global")
 
   return (
-    <div className="services-page">
+    <div className="services-page" >
       <div className="services-page__block">
-        <h1 className="services-page__title">{t("services-page.services-title")}</h1>
-
+      <NeonBanner title={t("services-page.services-title")}/>
         <ul className="services-page__list">
           <li className="services-page__element">
           {t("services-page.booking")}

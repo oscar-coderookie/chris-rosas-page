@@ -33,7 +33,7 @@
     text-transform: capitalize;
 
     &:hover {
-      border-bottom: 2px solid white;
+      animation: neon 3s infinite;
     }
   }
   &__link-active {

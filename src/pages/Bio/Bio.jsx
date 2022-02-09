@@ -5,16 +5,18 @@ import dyLogo1 from "../../assets/img/Logos-DY-1.png";
 import dyLogo2 from "../../assets/img/Logos-DY-2.png";
 import dyLogo3 from "../../assets/img/Logos-DY-3.png";
 import dyLogo4 from "../../assets/img/Logos-DY-4.png";
+import { NeonBanner } from "../../components";
 
 const Bio = () => {
   return (
     <div className="bio">
-      <h1 className="bio-title">Bio</h1>
+      <NeonBanner title="Bio" />
       <div className="bio-block">
         <div className="bio-image">
           <img src={profilePhoto} alt="chris-rosas" />
         </div>
         <div className="bio-text">
+        <NeonBanner title="Chris Rosas" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quae
             aliquam, inventore vitae enim accusamus tempore odit earum

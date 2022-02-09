@@ -4,13 +4,20 @@
     background-size: cover;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    &__banner{
+        margin-top: 40px;
+    }
+
 
     &__icon{
         width: 60px;
     }
     &__menu{
         display: flex;
+        height: 90px;
     }
 
     &__menu-item{

@@ -2,6 +2,7 @@ import React from "react";
 import "./ArtistsBio.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import NeonBanner from '../../components/NeonBanner/NeonBanner';
 
 const Biography = ({p1, p2, p3}) => {
   return (
@@ -22,7 +23,7 @@ const Biography = ({p1, p2, p3}) => {
 const ArtistsBio = ({ name, text1, text2, text3 }) => {
   return (
     <div className="artists-bio">
-      <h2 className="artists-bio__title">{name}</h2>
+      <NeonBanner title={name} />
       <Biography
       p1={text1}
       p2={text2}

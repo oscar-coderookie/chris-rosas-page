@@ -8,6 +8,7 @@ import MenuMobile from "./MenuMobile/MenuMobile";
 import LanguageSelector from "./LanguageSelector/LanguageSelector";
 import ArtistsBio from "./ArtistsBio/ArtistsBio";
 import SpinnerLoader from "./SpinnerLoader/SpinnerLoader";
+import NeonBanner from "./NeonBanner/NeonBanner";
 
 export {
   Header,
@@ -19,5 +20,6 @@ export {
   MenuMobile,
   LanguageSelector,
   ArtistsBio,
-  SpinnerLoader
+  SpinnerLoader,
+  NeonBanner
 };

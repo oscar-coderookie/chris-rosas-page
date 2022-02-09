@@ -11,7 +11,7 @@ const Header = () => {
   const ubication = window.location.pathname;
 
   return (
-    <div className="header">
+    <div className={ubication === "/" ? "header__clean" : "header"}>
       {ubication === "/" ? null : (
         <div className="header__logo">
           <img src={logo} alt="logo-chris" />

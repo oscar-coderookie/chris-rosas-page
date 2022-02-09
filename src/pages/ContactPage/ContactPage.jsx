@@ -1,5 +1,5 @@
 import React from "react";
-import { SocialNetworks } from "../../components";
+import { NeonBanner, SocialNetworks } from "../../components";
 import "./ContactPage.scss";
 import { useTranslation } from "react-i18next";
 
@@ -11,7 +11,7 @@ const ContactPage = () => {
 
   return (
     <div className="contact-page">
-      <h1 className="contact-page__title">{t("contact-page.contact")}</h1>
+      <NeonBanner title={t("contact-page.contact")} />
       <div className="contact-page__info">
         <div className="contact-page__email">
           <h4>
