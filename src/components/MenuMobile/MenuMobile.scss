@@ -31,9 +31,11 @@
     font-size: 16px;
     font-weight: 400;
     text-transform: capitalize;
+    animation: lighting infinite 3s;
+    
 
     &:hover {
-      animation: neon 3s infinite;
+      
     }
   }
   &__link-active {
@@ -42,6 +44,9 @@
   &__icons {
     font-size: 20px;
     margin-right: 4px;
+    width: 32px;
+    
+    
   }
 
   @media (max-width: 375px) {
@@ -54,6 +59,20 @@
     }
     &__icons {
       margin: 2px;
+      
     }
+  }
+}
+
+@keyframes lighting {
+
+  0%{
+    filter: drop-shadow(0px 0px 6px rgb(66, 164, 255));
+  }
+  50%{
+    filter: drop-shadow(0px 0px 18px rgb(25, 201, 255));
+  }
+  100%{
+    filter: drop-shadow(0px 0px 6px rgb(66, 164, 255));
   }
 }

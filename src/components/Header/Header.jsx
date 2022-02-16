@@ -4,6 +4,13 @@ import { NavLink, withRouter } from "react-router-dom";
 import logo from "../../assets/img/logo-blanco.png";
 import { useTranslation } from "react-i18next";
 import { TraductionFlags } from "..";
+//**icons: */
+import bioIcon from "./../../assets/img/icons/bio-icon.png";
+import homeIcon from "./../../assets/img/icons/home-icon.png";
+import servicesIcon from "./../../assets/img/icons/services-icon.png";
+import artistsIcon from "./../../assets/img/icons/artists-icon.png";
+import eventsIcon from "./../../assets/img/icons/events-icon.png";
+import contactIcon from "./../../assets/img/icons/contact-icon.png";
 
 const Header = () => {
   const [t, i18n] = useTranslation("global");
@@ -20,19 +27,19 @@ const Header = () => {
       <nav className="header__nav">
         {ubication === "/" ? null : (
           <NavLink exact to="/" className="header__links">
-            <span className="header__icons fas fa-home"></span>
+            <img src={homeIcon} className="header__icons" alt="home-icon" />
             {t("header.home")}
           </NavLink>
         )}
         {ubication === "/bio" ? null : (
           <NavLink to="/bio" className="header__links">
-            <span className="header__icons fas fa-address-card"></span>
+          <img src={bioIcon} className="header__icons" alt="home-icon" />
             {t("header.bio")}
           </NavLink>
         )}
         {ubication === "/services" ? null : (
           <NavLink to="/services" className="header__links">
-            <span className="header__icons fas fa-compact-disc"></span>
+          <img src={servicesIcon} className="header__icons" alt="home-icon" />
             {t("header.services")}
           </NavLink>
         )}
@@ -41,20 +48,20 @@ const Header = () => {
         ubication === "/daddy-yankee" ||
         ubication === "/nengo" ? null : (
           <NavLink to="/artists" className="header__links">
-            <span className="header__icons fas fa-music"></span>
+          <img src={artistsIcon} className="header__icons" alt="home-icon" />
             {t("header.artists")}
           </NavLink>
         )}
         {ubication === "/events" ? null : (
           <NavLink to="/events" className="header__links">
-            <span className="header__icons far fa-calendar-alt"></span>
+          <img src={eventsIcon} className="header__icons" alt="home-icon" />
             {t("header.events")}
           </NavLink>
         )}
 
         {ubication === "/contact" ? null : (
           <NavLink to="/contact" className="header__links">
-            <span className="header__icons fas fa-address-book"></span>
+          <img src={contactIcon} className="header__icons" alt="home-icon" />
             {t("header.contact")}
           </NavLink>
         )}

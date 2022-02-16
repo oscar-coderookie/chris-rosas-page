@@ -12,19 +12,19 @@ const ServicesPage = () => {
       <div className="services-page__block">
       <NeonBanner title={t("services-page.services-title")}/>
         <ul className="services-page__list">
-          <li className="services-page__element">
+          <li className="services-page__element impair">
           {t("services-page.booking")}
           </li>
           <li className="services-page__element">
           {t("services-page.management")}
           </li>
-          <li className="services-page__element">
+          <li className="services-page__element impair">
           {t("services-page.production")}
           </li>
           <li className="services-page__element">
           {t("services-page.mixing")}
           </li>
-          <li className="services-page__element">
+          <li className="services-page__element impair">
           {t("services-page.vocal")}
           </li>
           <li className="services-page__element">

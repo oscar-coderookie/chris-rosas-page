@@ -34,13 +34,6 @@
         }
         
     }
-
-    @media (max-width: 1024px){
-
-        &__video{
-            transform: translateY(0)
-        }
-    }
     @media (max-width: 768px) {
         height: calc(100vh - 60px);
         background: url('../../assets/img/bkg_home_mobile.jpg');
@@ -55,5 +48,8 @@
             width: 550px;
             transform: translateY(-30px)
         }
+    }
+    @media (max-width: 475px) {
+        height: calc(100vh - 76px);
     }
 }

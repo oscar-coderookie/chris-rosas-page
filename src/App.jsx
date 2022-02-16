@@ -15,6 +15,7 @@ import {
   MenuMobile,
   SpinnerLoader,
   EventsCarousel,
+  WhatsappBtn,
 } from "./components";
 import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 import whatsappLogo from "./assets/img/whatsapp-logo.svg";
@@ -104,13 +105,7 @@ function App() {
           </Switch>
         </Suspense>
 
-        <a
-          href="https://api.whatsapp.com/send?phone=+34722355841"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img className="whatsapp" src={whatsappLogo} alt="whatsapp" />
-        </a>
+        <WhatsappBtn />
 
         {getCookieConsentValue === true ? null : (
           <CookieConsent

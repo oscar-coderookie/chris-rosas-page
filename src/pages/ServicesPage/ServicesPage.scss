@@ -17,6 +17,7 @@
 
     &__block{
         display: flex;
+        width: 80%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -28,14 +29,18 @@
     }
     &__element{
         font-size: 20px;
-        margin: 20px 10px;
-        padding: 14px;
+        margin: 10px;
+        padding: 10px;
         font-weight: 200;
         filter: drop-shadow(1px 1px 3px 2px black);
         background: rgba(102, 102, 102, 0.32);
     }
+    
 
-    @media (max-width: 575px){
-        height: calc(100vh - 60px);
+    @media (max-width: 768px){
+        height: calc(100vh - 86px);
     }
+}
+.impair{
+    align-items: flex-end;
 }

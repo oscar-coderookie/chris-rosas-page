@@ -23,7 +23,7 @@
   }
 
   &__logo {
-    width: 150px;
+    width: 140px;
     margin-left: 20px;
     img{
       width: 100%;
@@ -31,9 +31,10 @@
    
   }
   &__icons {
-    color: white;
-    font-size: 18px;
+  
+    width: 30px;
     margin: 0px 4px;
+
   }
   &__links {
     text-decoration: none;
@@ -46,12 +47,11 @@
     display: flex;
     align-items: center;
     transition: all 0.4s ease;
-
+    animation: lighting infinite 3s;
 
 
     &:hover {
-      border-bottom: 1px solid white;
-      animation: neon 3s infinite;
+  
     }
   }
   @media (max-width: 768px) {
