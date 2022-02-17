@@ -34,7 +34,7 @@
     height: 250px;
 
     @media (max-width: 475px) {
-        height: 500px;
+        height: auto;
     }
 }
 .bio-carousel{

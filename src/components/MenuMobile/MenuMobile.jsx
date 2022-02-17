@@ -11,6 +11,7 @@ import servicesIcon from "./../../assets/img/icons/services-icon.png";
 import artistsIcon from "./../../assets/img/icons/artists-icon.png";
 import eventsIcon from "./../../assets/img/icons/events-icon.png";
 import contactIcon from "./../../assets/img/icons/contact-icon.png";
+import vipIcon from "./../../assets/img/icons/vip-icon.png";
 
 const MenuMobile = () => {
   const [t, i18n] = useTranslation("global");
@@ -65,6 +66,11 @@ const MenuMobile = () => {
           <NavLink exact to="/contact" className="menu-mobile__links">
           <img src={contactIcon} alt="" className="menu-mobile__icons" />
             {t("header.contact")}
+          </NavLink>
+        )}
+        {ubication === "/vip" ? null : (
+          <NavLink exact to="/vip" className="menu-mobile__icon-vip">
+          <img src={vipIcon} alt="" className="menu-mobile__icon-vip" />
           </NavLink>
         )}
       </nav>

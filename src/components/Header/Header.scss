@@ -32,11 +32,12 @@
   }
   &__icons {
   
-    width: 30px;
+    width: 28px;
     margin: 0px 4px;
 
   }
-  &__links {
+  &__icon-vip{
+    width: 30px;
     text-decoration: none;
     color: white;
     text-transform: uppercase;
@@ -47,12 +48,33 @@
     display: flex;
     align-items: center;
     transition: all 0.4s ease;
-    animation: lighting infinite 3s;
+    animation: shine infinite 3s;
 
-
-    &:hover {
-  
+    &:hover{
+      animation: none;
+      filter: drop-shadow(0px 0px 16px white);
     }
+
+  }
+  &__links {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    margin: 0px 6px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s ease;
+    animation: lighting infinite 3s;
+    &:hover{
+      animation: none;
+      filter: drop-shadow(0px 0px 6px white);
+      border-bottom: 2px solid white;
+      
+    }transform: translateY(3px);
+
   }
   @media (max-width: 768px) {
     display: flex;
@@ -84,5 +106,17 @@
     }
   }
   @media (max-width: 375px) {
+  }
+}
+
+@keyframes shine {
+  0%{
+    filter: drop-shadow(0px 0px 12px rgb(255, 232, 102)); 
+  }
+  50%{
+    filter: drop-shadow(0px 0px 6px rgb(255, 232, 102)); 
+  }
+  100%{
+    filter: drop-shadow(0px 0px 12px rgb(255, 232, 102)); 
   }
 }

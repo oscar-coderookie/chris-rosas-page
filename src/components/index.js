@@ -11,6 +11,8 @@ import SpinnerLoader from "./SpinnerLoader/SpinnerLoader";
 import NeonBanner from "./NeonBanner/NeonBanner";
 import EventsCarousel from "./EventsCarousel/EventsCarousel";
 import WhatsappBtn from "./WhatsappBtn/WhatsappBtn";
+import Footer from "./Footer/Footer";
+import VipComponent from "./VipComponent/VipComponent";
 
 export {
   Header,
@@ -25,5 +27,7 @@ export {
   SpinnerLoader,
   NeonBanner,
   EventsCarousel,
-  WhatsappBtn
+  WhatsappBtn, 
+  Footer, 
+  VipComponent
 };

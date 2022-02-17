@@ -5,7 +5,9 @@
     "bio": "Bio",
     "events": "Events",
     "contact": "Contact",
-    "artists": "Artists"
+    "artists": "Artists",
+    "vip": "VIP"
+
   },
   "contact-page": {
     "contact": "Contact",
@@ -23,5 +25,8 @@
     "mixing": "Mixing & Mastering",
     "vocal": "Vocal Production",
     "sonwriting": "Songwriting & Composition"
+  },
+  "footer":{
+    "copyright" :  "All rights reserved 2022"
   }
 }

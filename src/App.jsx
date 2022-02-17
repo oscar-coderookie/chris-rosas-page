@@ -10,15 +10,17 @@ import NattiNatasha from "./pages/NattiNatasha/NattiNatasha";
 import Bio from "./pages/Bio/Bio";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import EventsPage from "./pages/EventsPage/EventsPage";
+import VipPage from "./pages/VipPage/VipPage";
+
 import {
   Header,
   MenuMobile,
   SpinnerLoader,
   EventsCarousel,
   WhatsappBtn,
+  Footer,
 } from "./components";
 import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
-import whatsappLogo from "./assets/img/whatsapp-logo.svg";
 //**imports of slides images: */
 import natti from "./assets/img/events/natti-big-poster.jpg";
 import daddy from "./assets/img/events/daddy-event-big.jpg";
@@ -102,10 +104,14 @@ function App() {
             <Route exact path="/natti">
               <NattiNatasha />
             </Route>
+            <Route exact path="/vip">
+              <VipPage />
+            </Route>
           </Switch>
         </Suspense>
 
         <WhatsappBtn />
+        <Footer/>
 
         {getCookieConsentValue === true ? null : (
           <CookieConsent

@@ -11,6 +11,7 @@ import servicesIcon from "./../../assets/img/icons/services-icon.png";
 import artistsIcon from "./../../assets/img/icons/artists-icon.png";
 import eventsIcon from "./../../assets/img/icons/events-icon.png";
 import contactIcon from "./../../assets/img/icons/contact-icon.png";
+import vipIcon from "./../../assets/img/icons/vip-icon.png";
 
 const Header = () => {
   const [t, i18n] = useTranslation("global");
@@ -63,6 +64,13 @@ const Header = () => {
           <NavLink to="/contact" className="header__links">
           <img src={contactIcon} className="header__icons" alt="home-icon" />
             {t("header.contact")}
+          </NavLink>
+        )}
+
+        {ubication === "/vip" ? null : (
+          <NavLink to="/vip" className="header__icon-vip">
+          <img src={vipIcon} className="header__icon-vip" alt="home-icon" />
+            
           </NavLink>
         )}
       </nav>
