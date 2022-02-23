@@ -1,20 +1,14 @@
 import React from "react";
 import "./VipPage.scss";
-import {
-  BrowserRouter as Router,
-  NavLink,
-  Route,
-  Switch,
-} from "react-router-dom";
-import { VipComponent } from "../../components";
+import { NavLink } from "react-router-dom";
 
 const linksHeaderVip = [
-  { link: "Criptoworld", route: "/vip/criptoworld"},
+  { link: "Criptoworld", route: "/vip/criptoworld" },
   { link: "SuperCarros", route: "/vip/supercars" },
-  { link: "Jets/Aviación", route: "/vip/aviation"},
-  { link: "Properties", route: "/vip/properties"},
+  { link: "Jets/Aviación", route: "/vip/aviation" },
+  { link: "Properties", route: "/vip/properties" },
   { link: "NFTs", route: "/vip/nfts" },
-  { link: "Experiences", route: "/vip/experiences"},
+  { link: "Experiences", route: "/vip/experiences" },
 ];
 
 const HeaderVip = () => {
@@ -25,7 +19,7 @@ const HeaderVip = () => {
           return (
             <li key={index}>
               <NavLink className="header-vip__links" to={link.route}>
-              {link.link}
+                {link.link}
               </NavLink>
             </li>
           );

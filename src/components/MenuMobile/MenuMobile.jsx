@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Squash as Hamburger } from "hamburger-react";
 import "./MenuMobile.scss";
 import logo from "../../assets/img/logo-blanco.png";
 import { NavLink, withRouter } from "react-router-dom";
@@ -15,65 +16,128 @@ import vipIcon from "./../../assets/img/icons/vip-icon.png";
 
 const MenuMobile = () => {
   const [t, i18n] = useTranslation("global");
+  const [open, setOpen] = useState(false);
 
   const ubication = window.location.pathname;
 
   return (
     <div className="menu-mobile">
-      {ubication === "/" ? null : (
-        <div className="menu-mobile__header">
-          <img className="menu-mobile__logo" src={logo} alt="logo" />
-          <TraductionFlags className="menu-mobile__flags" />
-        </div>
-      )}
-      <nav className="menu-mobile__nav">
+      <div className="menu-mobile__header">
         {ubication === "/" ? null : (
-          <NavLink exact to="/" className="menu-mobile__links">
-            <img src={homeIcon} alt="" className="menu-mobile__icons" />
-            
-            {t("header.home")}
-          </NavLink>
+          <img className="menu-mobile__logo" src={logo} alt="logo" />
         )}
-        {ubication === "/bio" ? null : (
-          <NavLink exact to="/bio" className="menu-mobile__links">
-            <img src={bioIcon} alt="" className="menu-mobile__icons" />
-            {t("header.bio")}
-          </NavLink>
-        )}
-        {ubication === "/services" ? null : (
-          <NavLink exact to="/services" className="menu-mobile__links">
-          <img src={servicesIcon} alt="" className="menu-mobile__icons" />
-            {t("header.services")}
-          </NavLink>
-        )}
-        {ubication === "/artists" ||
-        ubication === "/natti" ||
-        ubication === "/daddy-yankee" ||
-        ubication === "/nengo" ? null : (
-          <NavLink exact to="/artists" className="menu-mobile__links">
-          <img src={artistsIcon} alt="" className="menu-mobile__icons" />
-            {t("header.artists")}
-          </NavLink>
-        )}
-        {ubication === "/events" ? null : (
-          <NavLink exact to="/events" className="menu-mobile__links">
-          <img src={eventsIcon} alt="" className="menu-mobile__icons" />
-            
-            {t("header.events")}
-          </NavLink>
-        )}
-        {ubication === "/contact" ? null : (
-          <NavLink exact to="/contact" className="menu-mobile__links">
-          <img src={contactIcon} alt="" className="menu-mobile__icons" />
-            {t("header.contact")}
-          </NavLink>
-        )}
-        {ubication === "/vip" ? null : (
-          <NavLink exact to="/vip" className="menu-mobile__icon-vip">
-          <img src={vipIcon} alt="" className="menu-mobile__icon-vip" />
-          </NavLink>
-        )}
-      </nav>
+        <Hamburger
+          toggled={open}
+          toggle={setOpen}
+          onClick={() => setOpen(!open)}
+          color="#ffffff"
+        />
+      </div>
+      {open === false ? null : (
+        <nav className="menu-mobile__nav">
+          <div className="menu-mobile__buttons">
+            <NavLink
+              exact
+              to="/"
+              className="menu-mobile__links"
+              onClick={() => setOpen(!open)}
+            >
+              <img
+                src={homeIcon}
+                alt="home-icon"
+                className="menu-mobile__icons"
+              />
+
+              {t("header.home")}
+            </NavLink>
+
+            <NavLink
+              exact
+              to="/bio"
+              className="menu-mobile__links"
+              onClick={() => setOpen(!open)}
+            >
+              <img
+                src={bioIcon}
+                alt="bio-icon"
+                className="menu-mobile__icons"
+              />
+              {t("header.bio")}
+            </NavLink>
+
+            <NavLink
+              exact
+              to="/services"
+              className="menu-mobile__links"
+              onClick={() => setOpen(!open)}
+            >
+              <img
+                src={servicesIcon}
+                alt="services-icon"
+                className="menu-mobile__icons"
+              />
+              {t("header.services")}
+            </NavLink>
+
+            <NavLink
+              exact
+              to="/artists"
+              className="menu-mobile__links"
+              onClick={() => setOpen(!open)}
+            >
+              <img
+                src={artistsIcon}
+                alt="artists-icon"
+                className="menu-mobile__icons"
+              />
+              {t("header.artists")}
+            </NavLink>
+
+            <NavLink
+              exact
+              to="/events"
+              className="menu-mobile__links"
+              onClick={() => setOpen(!open)}
+            >
+              <img
+                src={eventsIcon}
+                alt="events-icon"
+                className="menu-mobile__icons"
+              />
+
+              {t("header.events")}
+            </NavLink>
+
+            <NavLink
+              exact
+              to="/contact"
+              className="menu-mobile__links"
+              onClick={() => setOpen(!open)}
+            >
+              <img
+                src={contactIcon}
+                alt="contact-icon"
+                className="menu-mobile__icons"
+              />
+              {t("header.contact")}
+            </NavLink>
+
+            <NavLink
+              exact
+              to="/vip"
+              className="menu-mobile__icon-vip"
+              onClick={() => setOpen(!open)}
+            >
+              <img
+                src={vipIcon}
+                alt="vip-icon"
+                className="menu-mobile__icon-vip"
+              />
+            </NavLink>
+          </div>
+          <TraductionFlags/>
+        </nav>
+      )}
     </div>
   );
 };

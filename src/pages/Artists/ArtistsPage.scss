@@ -77,6 +77,9 @@
         height: auto;
     }
     @media (max-width: 425px) {
+     
+            padding-top: 60px;
+        
         &__container{
             margin-bottom: 60px;
         }

@@ -2,7 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
   flex-direction: column;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(33,33,33,1) 50%, rgba(0,0,0,1) 100%);
 
   &__header {
     display: flex;
@@ -11,32 +15,44 @@
     justify-content: space-between;
   }
   &__logo {
-    height: 100px;
+    height: 60px;
     margin-left: 8px;
   }
   &__nav {
     margin: 10px 0px;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  &__buttons{
+    display: flex;
+  
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
   }
   &__icon-vip {
     text-decoration: none;
     color: white;
     width: 40px;
-    margin: 0px 4px 10px 4px;
+    margin: 10px 4px 10px 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     font-size: 16px;
     font-weight: 400;
-    animation: shine infinite 3s;
+    animation: shine 4s infinite;
     transition: all ease 0.4s;
 
     &:hover {
       animation: none;
       filter: drop-shadow(0px 0px 6px white);
       
-      
+    }
+    &:active{
+      animation: shine infinite 3s;
     }
   }
 
@@ -46,17 +62,20 @@
     margin: 0px 4px;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     font-size: 16px;
     font-weight: 400;
     text-transform: capitalize;
-    animation: lighting infinite 3s;
     transition: all ease 0.4s;
 
     &:hover {
       animation: none;
       filter: drop-shadow(0px 0px 16px white);
+    }
+    &:active{
+      animation: lighting infinite 3s;
     }
   }
   &__link-active {
@@ -64,7 +83,6 @@
   }
   &__icons {
     font-size: 20px;
-    margin-right: 4px;
     width: 30px;
     animation: lighting infinite 3s;
   }

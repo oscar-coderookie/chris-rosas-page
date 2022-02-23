@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import { ArtistsBio, GalleryArtists, SocialBar } from "../../components";
 import "./ÑengoFlow.scss";
 import { pagina1, pagina2, pagina3, images } from "../../mocks/ñengo";
 
 
 const ÑengoFlow = () => {
+
+  
+
   return (
     <div className="ñengo-block">
       <div className="ñengo-flow__hero"></div>
