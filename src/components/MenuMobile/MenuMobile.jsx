@@ -125,7 +125,7 @@ const MenuMobile = () => {
             <NavLink
               exact
               to="/vip"
-              className="menu-mobile__icon-vip"
+              className="menu-mobile__links"
               onClick={() => setOpen(!open)}
             >
               <img

@@ -32,7 +32,7 @@ import nengoMobile from "./assets/img/events/nengo-little-poster.jpg";
 function App() {
   const [breakpoint, setBreakpoint] = useState(true);
   const handleWindowResize = () => {
-    if (window.innerWidth > 520) {
+    if (window.innerWidth > 425) {
       setBreakpoint(true);
     } else {
       setBreakpoint(false);
@@ -41,7 +41,7 @@ function App() {
 
   useEffect(() => {
     window.addEventListener("resize", handleWindowResize);
-    if (window.innerWidth > 520) {
+    if (window.innerWidth > 425) {
       setBreakpoint(true);
     } else {
       setBreakpoint(false);

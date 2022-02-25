@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { ArtistsBio, GalleryArtists, SocialBar } from "../../components";
 import "./ÑengoFlow.scss";
 import { pagina1, pagina2, pagina3, images } from "../../mocks/ñengo";

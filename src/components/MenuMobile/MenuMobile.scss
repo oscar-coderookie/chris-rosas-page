@@ -19,18 +19,19 @@
     margin-left: 8px;
   }
   &__nav {
-    margin: 10px 0px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
+    height: calc(100vh - 60px);
   }
   &__buttons{
     display: flex;
-  
+  flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
+    
   }
   &__icon-vip {
     text-decoration: none;
@@ -40,7 +41,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     font-size: 16px;
     font-weight: 400;
     animation: shine 4s infinite;
@@ -51,31 +51,25 @@
       filter: drop-shadow(0px 0px 6px white);
       
     }
-    &:active{
-      animation: shine infinite 3s;
-    }
+
   }
 
   &__links {
     text-decoration: none;
     color: white;
-    margin: 0px 4px;
     display: flex;
     align-items: center;
-    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     font-size: 16px;
     font-weight: 400;
     text-transform: capitalize;
     transition: all ease 0.4s;
+    animation: lighting 4s infinite;
 
     &:hover {
       animation: none;
       filter: drop-shadow(0px 0px 16px white);
-    }
-    &:active{
-      animation: lighting infinite 3s;
     }
   }
   &__link-active {
@@ -84,7 +78,7 @@
   &__icons {
     font-size: 20px;
     width: 30px;
-    animation: lighting infinite 3s;
+
   }
 
   @media (max-width: 375px) {
