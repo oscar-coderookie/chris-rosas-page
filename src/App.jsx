@@ -11,6 +11,12 @@ import Bio from "./pages/Bio/Bio";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import EventsPage from "./pages/EventsPage/EventsPage";
 import VipPage from "./pages/VipPage/VipPage";
+import {
+  images as delaGeezy,
+  text1,
+  text2,
+  text3,
+} from "./mocks/delaghetto.js";
 
 import {
   Header,
@@ -117,9 +123,15 @@ function App() {
                 igLink="https://www.instagram.com/delaghetto/?hl=es"
                 spotyFollowers="9,9 M"
                 spotyLink="https://open.spotify.com/artist/3EiLUeyEcA6fbRPSHkG5kb"
-                urlHero={require("./assets/img/delaghetto.png")}
-
-
+                urlHero={
+                  breakpoint
+                    ? require("./assets/img/delaghetto.png")
+                    : require("./assets/img/delaghetto-mobile.png")
+                }
+                images={delaGeezy}
+                txt1={text1}
+                txt2={text2}
+                txt3={text3}
               />
             </Route>
           </Switch>

@@ -16,10 +16,7 @@ const Biography = ({ p1, p2, p3, p4 }) => {
       <div className="bio-slide">
         <p className="bio-paragraph">{p3}</p>
       </div>
- 
-        {p4 === " "? null : <div className="bio-slide">
-          <p className="bio-paragraph">{p4}</p>
-        </div>}
+
       
     </Carousel>
   );
