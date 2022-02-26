@@ -1,11 +1,12 @@
 .daddy {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: url(./../../assets/img/background-neon-2.jpg);
-  width: 100%;
-  background-size: cover;
-  &-yankee {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+
+  &-yankee__hero {
     height: calc(100vh - 80px);
     background: url("./../../assets/img/daddy-desktop.jpg") no-repeat;
     width: 100%;
@@ -15,6 +16,16 @@
 
     &__bio {
       margin: 40px 0px;
+    }
+    &-yankee__bio{
+      background: url(./../../assets/img/background-neon-2.jpg);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    padding-bottom: 40px;
     }
 
     @media (max-width: 425px) {

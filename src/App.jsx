@@ -19,6 +19,7 @@ import {
   EventsCarousel,
   WhatsappBtn,
   Footer,
+  ArtistComponent,
 } from "./components";
 import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 //**imports of slides images: */
@@ -107,11 +108,25 @@ function App() {
             <Route exact path="/vip">
               <VipPage />
             </Route>
+            <Route exact path="/delageezy">
+              <ArtistComponent
+                name="De La Ghetto"
+                ytLink="https://www.youtube.com/channel/UCRp097cJIVS-cQ_GuZWQkJg"
+                ytFollowers="2,68 M"
+                igFollowers="7,7 M"
+                igLink="https://www.instagram.com/delaghetto/?hl=es"
+                spotyFollowers="9,9 M"
+                spotyLink="https://open.spotify.com/artist/3EiLUeyEcA6fbRPSHkG5kb"
+                urlHero={require("./assets/img/delaghetto.png")}
+
+
+              />
+            </Route>
           </Switch>
         </Suspense>
 
         <WhatsappBtn />
-        <Footer/>
+        <Footer />
 
         {getCookieConsentValue === true ? null : (
           <CookieConsent

@@ -13,6 +13,7 @@ import EventsCarousel from "./EventsCarousel/EventsCarousel";
 import WhatsappBtn from "./WhatsappBtn/WhatsappBtn";
 import Footer from "./Footer/Footer";
 import VipComponent from "./VipComponent/VipComponent";
+import ArtistComponent from "./ArtistComponent/ArtistComponent";
 
 export {
   Header,
@@ -29,5 +30,6 @@ export {
   EventsCarousel,
   WhatsappBtn, 
   Footer, 
-  VipComponent
+  VipComponent,
+  ArtistComponent
 };
