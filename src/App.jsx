@@ -1,6 +1,8 @@
 import React, { useState, useEffect, Suspense } from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { db } from "./config/firebase";
+import { getDocs, collection, orderBy,query } from "firebase/firestore/lite";
 import HomePage from "./pages/HomePage/HomePage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import ArtistsPage from "./pages/Artists/ArtistsPage";
@@ -38,6 +40,19 @@ import nengoMobile from "./assets/img/events/nengo-little-poster.jpg";
 
 function App() {
   const [breakpoint, setBreakpoint] = useState(true);
+  const [artists, setArtists] = useState([]);
+  
+
+  useEffect(() => {
+    const artistsCollectionRef = query(collection(db, "artistas"), orderBy("nombre", "desc"));
+    const getArtists = async () => {
+      const data = await getDocs(artistsCollectionRef);
+      setArtists(data.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+    };
+    getArtists();
+  }, []);
+
+
   const handleWindowResize = () => {
     if (window.innerWidth > 425) {
       setBreakpoint(true);
@@ -100,21 +115,18 @@ function App() {
               <EventsCarousel />
             </Route>
             <Route exact path="/artists">
-              <ArtistsPage />
+              <ArtistsPage artists={artists} />
             </Route>
-            <Route exact path="/daddy-yankee">
+            <Route exact path="/artists/daddy-yankee">
               <DaddyYankee />
             </Route>
-            <Route exact path="/nengo">
+            <Route exact path="/artists/nengo-flow">
               <ÑengoFlow />
             </Route>
-            <Route exact path="/natti">
+            <Route exact path="/artists/natti-natasha">
               <NattiNatasha />
             </Route>
-            <Route exact path="/vip">
-              <VipPage />
-            </Route>
-            <Route exact path="/delageezy">
+            <Route exact path="/artists/de-la-ghetto">
               <ArtistComponent
                 name="De La Ghetto"
                 ytLink="https://www.youtube.com/channel/UCRp097cJIVS-cQ_GuZWQkJg"
@@ -133,6 +145,9 @@ function App() {
                 txt2={text2}
                 txt3={text3}
               />
+              <Route exact path="/vip">
+              <VipPage />
+            </Route>
             </Route>
           </Switch>
         </Suspense>

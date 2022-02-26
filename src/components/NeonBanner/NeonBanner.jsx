@@ -4,7 +4,7 @@ import "./NeonBanner.scss";
 const NeonBanner = ({title}) => {
   return (
     <div className="neon-banner">
-      <div class="neon-banner__eventos">{title} </div>
+      <div className="neon-banner__eventos">{title} </div>
     </div>
   );
 };

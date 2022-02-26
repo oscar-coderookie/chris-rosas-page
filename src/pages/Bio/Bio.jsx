@@ -10,13 +10,13 @@ import { NeonBanner } from "../../components";
 const Bio = () => {
   return (
     <div className="bio">
-      <NeonBanner title="Bio" />
+      <NeonBanner title="Chris Rosas" />
       <div className="bio-block">
         <div className="bio-image">
           <img src={profilePhoto} alt="chris-rosas" />
         </div>
         <div className="bio-text">
-        <NeonBanner title="Chris Rosas" />
+        <NeonBanner />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quae
             aliquam, inventore vitae enim accusamus tempore odit earum

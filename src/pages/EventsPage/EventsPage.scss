@@ -33,9 +33,10 @@
         color: white;
         margin: 10px;
         height: 60px;
+        animation: lighting 3s infinite;
 
         &:hover{
-            animation: neon 3s infinite;
+            animation: none;
         }
     }
     @media(max-width: 425px) {

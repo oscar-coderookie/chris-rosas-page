@@ -26,53 +26,39 @@ const Header = () => {
         </div>
       )}
       <nav className="header__nav">
-        {ubication === "/" ? null : (
-          <NavLink exact to="/" className="header__links">
-            <img src={homeIcon} className="header__icons" alt="home-icon" />
-            {t("header.home")}
-          </NavLink>
-        )}
-        {ubication === "/bio" ? null : (
-          <NavLink to="/bio" className="header__links">
+        <NavLink exact to="/" className="header__links">
+          <img src={homeIcon} className="header__icons" alt="home-icon" />
+          {t("header.home")}
+        </NavLink>
+
+        <NavLink to="/bio" className="header__links">
           <img src={bioIcon} className="header__icons" alt="home-icon" />
-            {t("header.bio")}
-          </NavLink>
-        )}
-        {ubication === "/services" ? null : (
-          <NavLink to="/services" className="header__links">
+          {t("header.bio")}
+        </NavLink>
+
+        <NavLink to="/services" className="header__links">
           <img src={servicesIcon} className="header__icons" alt="home-icon" />
-            {t("header.services")}
-          </NavLink>
-        )}
-        {ubication === "/artists" ||
-        ubication === "/natti" ||
-        ubication === "/daddy-yankee" ||
-        ubication === "/nengo" ? null : (
-          <NavLink to="/artists" className="header__links">
+          {t("header.services")}
+        </NavLink>
+
+        <NavLink to="/artists" className="header__links">
           <img src={artistsIcon} className="header__icons" alt="home-icon" />
-            {t("header.artists")}
-          </NavLink>
-        )}
-        {ubication === "/events" ? null : (
-          <NavLink to="/events" className="header__links">
+          {t("header.artists")}
+        </NavLink>
+
+        <NavLink to="/events" className="header__links">
           <img src={eventsIcon} className="header__icons" alt="home-icon" />
-            {t("header.events")}
-          </NavLink>
-        )}
+          {t("header.events")}
+        </NavLink>
 
-        {ubication === "/contact" ? null : (
-          <NavLink to="/contact" className="header__links">
+        <NavLink to="/contact" className="header__links">
           <img src={contactIcon} className="header__icons" alt="home-icon" />
-            {t("header.contact")}
-          </NavLink>
-        )}
+          {t("header.contact")}
+        </NavLink>
 
-        {ubication === "/vip" ? null : (
-          <NavLink to="/vip" className="header__icon-vip">
+        <NavLink to="/vip" className="header__icon-vip">
           <img src={vipIcon} className="header__icon-vip" alt="home-icon" />
-            
-          </NavLink>
-        )}
+        </NavLink>
       </nav>
       {ubication === "/" ? null : <TraductionFlags />}
     </div>
