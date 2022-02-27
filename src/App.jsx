@@ -15,9 +15,7 @@ import EventsPage from "./pages/EventsPage/EventsPage";
 import VipPage from "./pages/VipPage/VipPage";
 import {
   images as delaGeezy,
-  text1,
-  text2,
-  text3,
+ biography as bioDela
 } from "./mocks/delaghetto.js";
 
 import {
@@ -141,9 +139,7 @@ function App() {
                     : require("./assets/img/delaghetto-mobile.png")
                 }
                 images={delaGeezy}
-                txt1={text1}
-                txt2={text2}
-                txt3={text3}
+                biography={bioDela}
               />
               <Route exact path="/vip">
               <VipPage />

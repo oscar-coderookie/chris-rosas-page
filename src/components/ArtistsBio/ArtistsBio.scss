@@ -27,12 +27,12 @@
 .bio-paragraph{
     text-align: justify;
     color:#d3faff;
-    width: 80%;
+    width: 60%;
 }
 .bio-slide{
     display: flex;
     justify-content: center;
-    height: 250px;
+    height: auto;
     width: 100%;
 
     @media (max-width: 475px) {

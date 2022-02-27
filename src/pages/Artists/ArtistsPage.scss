@@ -1,5 +1,4 @@
 .artists-page{
-    height: calc(100vh - 80px);
     display: flex;
     background: url('./../../assets/img/background-neon-2.jpg');
     width: 100%;
@@ -7,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 60px;
 
 
     &__title{

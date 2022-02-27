@@ -6,6 +6,8 @@ const GalleryArtists = ({ images }) => {
   return (
     <ImageGallery
       items={images}
+      disableThumbnailScroll={true}
+      showThumbnails={false}
     />
   );
 };

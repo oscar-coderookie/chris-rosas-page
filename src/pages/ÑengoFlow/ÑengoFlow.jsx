@@ -1,7 +1,7 @@
 import React from "react";
 import { ArtistsBio, GalleryArtists, SocialBar } from "../../components";
 import "./ÑengoFlow.scss";
-import { pagina1, pagina2, pagina3, images } from "../../mocks/ñengo";
+import { pagina1, pagina2, pagina3, images, bioNengo } from "../../mocks/ñengo";
 
 
 const ÑengoFlow = () => {
@@ -26,9 +26,7 @@ const ÑengoFlow = () => {
       </div>
       <ArtistsBio
         name="Ñengo Flow"
-        text1={pagina1}
-        text2={pagina2}
-        text3={pagina3}
+       biography={bioNengo}
       />
     </div>
   );

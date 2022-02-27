@@ -12,13 +12,14 @@ const ArtistComponent = ({
   ytLink,
   images,
   name,
-  txt1,
-  txt2,
-  txt3
+biography
 }) => {
   return (
     <div className="artist-block">
-      <img src={urlHero} alt={urlHero} className="artist-hero" />
+    <div className="artist-hero">
+    <img src={urlHero} alt={urlHero} className="artist-hero" />
+    </div>
+      
       <div className="artist-bio">
         <SocialBar
           igFollowers={igFollowers}
@@ -34,9 +35,7 @@ const ArtistComponent = ({
       </div>
       <ArtistsBio
         name={name}
-        text1={txt1}
-        text2={txt2}
-        text3={txt3}
+        biography={biography}
       />
     </div>
   );
