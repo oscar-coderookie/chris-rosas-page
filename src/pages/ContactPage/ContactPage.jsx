@@ -1,22 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NeonBanner, SocialNetworks } from "../../components";
 import "./ContactPage.scss";
 import { useTranslation } from "react-i18next";
 
-
 const ContactPage = () => {
+ 
+ 
 
-  const [t, i18n] = useTranslation('global');
-
+  const [t, i18n] = useTranslation("global");
 
   return (
     <div className="contact-page">
       <NeonBanner title={t("contact-page.contact")} />
       <div className="contact-page__info">
         <div className="contact-page__email">
-          <h4>
-            {t("contact-page.legend")}
-          </h4>
+          <h4>{t("contact-page.legend")}</h4>
           <a href="mailto:chris@chrisrosas.com">
             <span className="fas fa-envelope-open-text"></span>{" "}
           </a>
@@ -30,7 +28,6 @@ const ContactPage = () => {
           <span className="fas fa-map-marked-alt"></span>
           <p>{t("contact-page.malaga")}</p>
         </div>
-        
       </div>
     </div>
   );

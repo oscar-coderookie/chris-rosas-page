@@ -8,9 +8,17 @@
   }
   &-hero{
     width: 100%;
-    background-size: cover;
-    background-position: center;
+    height: calc(100vh - 80px);
+    overflow: hidden;
     background-attachment: fixed;
+
+    img{
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      background-attachment: fixed;
+      
+    }
   }
   &-bio{
     background: url(./../../assets/img/background-neon-2.jpg);
@@ -21,5 +29,11 @@
     flex-direction: column;
     background-size: cover;
     padding-bottom: 40px;
+  }
+
+  @media (max-width: 425px) {
+    &-hero{
+      padding-top: 20px;
+    }
   }
 }

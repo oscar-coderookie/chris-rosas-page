@@ -17,7 +17,7 @@ biography
   return (
     <div className="artist-block">
     <div className="artist-hero">
-    <img src={urlHero} alt={urlHero} className="artist-hero" />
+    <img src={urlHero} alt={urlHero} className="" />
     </div>
       
       <div className="artist-bio">

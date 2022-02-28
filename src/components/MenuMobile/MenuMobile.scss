@@ -6,32 +6,39 @@
   width: 100%;
   z-index: 20;
   flex-direction: column;
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(33,33,33,1) 50%, rgba(0,0,0,1) 100%);
 
   &__header {
     display: flex;
     align-items: center;
     width: 100%;
+    background: linear-gradient(
+      180deg,
+      rgb(15, 15, 15) 0%,
+      rgba(33, 33, 33, 1) 50%,
+      rgb(15, 15, 15) 100%
+    );
     justify-content: space-between;
   }
   &__logo {
     height: 60px;
-    margin-left: 8px;
+    margin-left: 4px;
+    filter: drop-shadow(0px 0px 3px white);
   }
   &__nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: 100vh;
+    background: url("../../assets/img/background-neon-2.jpg");
+    background-size: cover;
   }
-  &__buttons{
+  &__buttons {
     display: flex;
-  flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
-    
+    width: 80%;
+    margin-top: 60px;
   }
   &__icon-vip {
     text-decoration: none;
@@ -49,9 +56,7 @@
     &:hover {
       animation: none;
       filter: drop-shadow(0px 0px 6px white);
-      
     }
-
   }
 
   &__links {
@@ -59,35 +64,24 @@
     color: white;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     font-size: 16px;
     font-weight: 400;
+    width: 120px;
     text-transform: capitalize;
     transition: all ease 0.4s;
-    animation: lighting 4s infinite;
+    filter: drop-shadow(0px 0px 6px white);
+  }
 
-    &:hover {
-      animation: none;
-      filter: drop-shadow(0px 0px 16px white);
-    }
-  }
-  &__link-active {
-    color: gold;
-  }
   &__icons {
     font-size: 20px;
-    width: 30px;
-
+    width: 36px;
+    filter: drop-shadow(0px 0px 16px rgb(94, 202, 252));
   }
 
   @media (max-width: 375px) {
-    &__nav {
-      margin: 8px 0px;
-    }
-    &__links {
-      height: 60px;
-    }
     &__icons {
       margin: 2px;
     }

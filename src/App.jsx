@@ -2,7 +2,7 @@ import React, { useState, useEffect, Suspense } from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { db } from "./config/firebase";
-import { getDocs, collection, orderBy,query } from "firebase/firestore/lite";
+import { getDocs, collection, orderBy, query } from "firebase/firestore/lite";
 import HomePage from "./pages/HomePage/HomePage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import ArtistsPage from "./pages/Artists/ArtistsPage";
@@ -15,7 +15,7 @@ import EventsPage from "./pages/EventsPage/EventsPage";
 import VipPage from "./pages/VipPage/VipPage";
 import {
   images as delaGeezy,
- biography as bioDela
+  biography as bioDela,
 } from "./mocks/delaghetto.js";
 
 import {
@@ -35,21 +35,27 @@ import nengo from "./assets/img/events/nengo-big-poster.jpg";
 import nattiMobile from "./assets/img/events/natti-little-poster.jpg";
 import daddyMobile from "./assets/img/events/daddy-yankee-poster-little.jpg";
 import nengoMobile from "./assets/img/events/nengo-little-poster.jpg";
+import { biographyZyL, imagesZyL } from "./mocks/zyl";
+import { imagesSasha, biographySasha } from "./mocks/sasha";
+import { bioRkm, imagesRkm } from "./mocks/rakim-keny";
 
 function App() {
   const [breakpoint, setBreakpoint] = useState(true);
   const [artists, setArtists] = useState([]);
-  
+
 
   useEffect(() => {
-    const artistsCollectionRef = query(collection(db, "artistas"), orderBy("nombre", "desc"));
+    const artistsCollectionRef = query(
+      collection(db, "artistas"),
+      orderBy("nombre", "desc")
+    );
     const getArtists = async () => {
       const data = await getDocs(artistsCollectionRef);
       setArtists(data.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
     };
     getArtists();
+   
   }, []);
-
 
   const handleWindowResize = () => {
     if (window.innerWidth > 425) {
@@ -141,10 +147,63 @@ function App() {
                 images={delaGeezy}
                 biography={bioDela}
               />
-              <Route exact path="/vip">
+            </Route>
+            <Route exact path="/artists/zion-lennox">
+              <ArtistComponent name="Zion & Lennox"
+              ytLink="https://www.youtube.com/channel/UCyInsLK0iu7xYvKmOKIZe8w"
+              ytFollowers="3,1 M"
+              igFollowers="3,4 M"
+              igLink="https://www.instagram.com/zionylennox/?hl=es"
+              spotyLink="https://open.spotify.com/artist/21451j1KhjAiaYKflxBjr1"
+              spotyFollowers="18,5 M"
+              urlHero={
+                breakpoint
+                  ? require("./assets/img/zyl-desktop.jpg")
+                  : require("./assets/img/zyl-mobile.jpg")   
+              }
+              images={imagesZyL}
+              biography={biographyZyL}/>
+            </Route>
+            <Route exact path="/artists/sasha-sobhani">
+              <ArtistComponent 
+              name="Sasha"
+              igFollowers="2,6 M"
+              igLink="https://www.instagram.com/sashazob/?hl=es"
+              ytFollowers="13,1 K"
+              ytLink="https://www.youtube.com/channel/UCuAEbcCYXvkHtiXTDNxXjkg"
+              spotyLink="https://open.spotify.com/artist/6bHULWQ9CCRWuRshc0gfzD"
+              spotyFollowers="3,4 K"
+              images={imagesSasha}
+              biography={biographySasha}
+              urlHero={
+                breakpoint
+                  ? require("./assets/img/sasha-desktop.jpg")
+                  : require("./assets/img/sasha-mobile.jpg")   
+              }
+               />
+            </Route>
+            <Route exact path="/artists/rkm-keny">
+              <ArtistComponent 
+              name="Rakim & Ken-Y"
+              igFollowers="752 K"
+              igLink="https://www.instagram.com/rkmykeny/?hl=es"
+              ytFollowers="709 K"
+              ytLink="https://www.youtube.com/channel/UCcA4ZpNHrs4fEJG9xCc3B8g"
+              spotyFollowers="3 M"
+              spotyLink="https://open.spotify.com/artist/3jFjgKOGfVLWfXX8q5wrsg"
+              images={bioRkm}
+              biography={imagesRkm}
+              urlHero={
+                breakpoint
+                  ? require("./assets/img/sasha-desktop.jpg")
+                  : require("./assets/img/sasha-mobile.jpg")   
+              }
+               />
+            </Route>
+            <Route exact path="/vip">
               <VipPage />
             </Route>
-            </Route>
+
           </Switch>
         </Suspense>
 
