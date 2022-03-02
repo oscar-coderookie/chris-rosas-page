@@ -3,6 +3,8 @@ import "./GalleryArtists.scss";
 import ImageGallery from "react-image-gallery";
 
 const GalleryArtists = ({ images }) => {
+
+
   return (
     <ImageGallery
       items={images}

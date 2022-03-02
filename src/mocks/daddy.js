@@ -13,7 +13,7 @@ const biographyDaddy = [
   }
 ]
 
-const images = [
+const imagesDaddy = [
     {
       original: "https://firebasestorage.googleapis.com/v0/b/chris-rosas-web.appspot.com/o/artistas%2Fdaddy-yankee%2F49526027_891848041206688_3830372954828196660_n-824x1030.jpg?alt=media&token=a4469f4d-1435-492b-b5f4-4452b8c5878f"
     },
@@ -49,5 +49,5 @@ const images = [
 
 export{
     biographyDaddy,
-    images
+    imagesDaddy
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { SocialBar, GalleryArtists, ArtistsBio } from "../../components";
 import "./DaddyYankee.scss";
-import { biographyDaddy, images } from "../../mocks/daddy";
+import { biographyDaddy, imagesDaddy } from "../../mocks/daddy";
 
 const DaddyYankee = () => {
   return (
@@ -17,7 +17,7 @@ const DaddyYankee = () => {
           spotyLink="https://open.spotify.com/artist/4VMYDCV2IEDYJArk749S6m"
         />
         <div className="daddy-gallery">
-          <GalleryArtists images={images} />
+          <GalleryArtists images={imagesDaddy} />
         </div>
       </div>
 

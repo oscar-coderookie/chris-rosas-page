@@ -8,20 +8,14 @@
   }
   &-hero{
     width: 100%;
-    height: calc(100vh - 80px);
-    overflow: hidden;
     background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 
-    img{
-      width: 100%;
-      object-fit: cover;
-      object-position: center;
-      background-attachment: fixed;
-      
-    }
   }
   &-bio{
     background: url(./../../assets/img/background-neon-2.jpg);
+    background-attachment: fixed;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -33,7 +27,8 @@
 
   @media (max-width: 425px) {
     &-hero{
-      padding-top: 20px;
+  
+      width: 100vw
     }
   }
 }

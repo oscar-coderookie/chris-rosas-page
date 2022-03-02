@@ -1,12 +1,6 @@
 const biographySasha = [
     {
-        text: ""
-    },
-    {
-        text: ""
-    },
-    {
-        text: ""
+        text: "Sasha Sobhani nació en Irán hace 33 años, pero habla español con acento latino. Su padre ejerció como embajador en Venezuela y allí descubrió un mundo disoluto de fiestas infinitas, mujeres voluptuosas y champán caro. Un paraíso prohibido en el régimen de los ayatolás y del que él se enamoró. Interiorizó este modo de vida del que hace gala en Instagram ante sus 2, 6 millones de seguidores. Su perfil es una sucesión de fotos ostentosas, a bordo de coches de lujo y rodeado de un ejército de mujeres con poca ropa con las que baila al son de alguno de sus temas de reguetón."
     },
 ];
 

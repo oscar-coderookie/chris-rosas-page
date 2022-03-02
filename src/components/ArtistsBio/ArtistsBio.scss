@@ -17,6 +17,7 @@
         text-align: justify;
         width: 80%;
         color:#d3faff;
+        
 
         @media (max-width: 475px) {
             width: 100%;
@@ -28,12 +29,14 @@
     text-align: justify;
     color:#d3faff;
     width: 80%;
+    padding-bottom: 10px;
 }
 .bio-slide{
     display: flex;
     justify-content: center;
     height: auto;
     width: 100%;
+    margin-bottom: 10px;
 
     @media (max-width: 475px) {
         height: auto;

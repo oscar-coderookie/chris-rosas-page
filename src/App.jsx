@@ -38,11 +38,17 @@ import nengoMobile from "./assets/img/events/nengo-little-poster.jpg";
 import { biographyZyL, imagesZyL } from "./mocks/zyl";
 import { imagesSasha, biographySasha } from "./mocks/sasha";
 import { bioRkm, imagesRkm } from "./mocks/rakim-keny";
+import { bioIvy, imagesIvy } from "./mocks/ivy-queen";
+import { bioPeter, imagesPeter } from "./mocks/peter-nieto";
+import { bioChencho, imagesChencho } from "./mocks/chencho";
+import { bioGuaynaa, imagesGuaynaa } from "./mocks/guaynaa";
+import { bioJonz, imagesJonz } from "./mocks/jonz";
+import { bioOvi, imagesOVI } from "./mocks/ovi";
+import { biographyDaddy, imagesDaddy } from "./mocks/daddy";
 
 function App() {
   const [breakpoint, setBreakpoint] = useState(true);
   const [artists, setArtists] = useState([]);
-
 
   useEffect(() => {
     const artistsCollectionRef = query(
@@ -54,7 +60,6 @@ function App() {
       setArtists(data.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
     };
     getArtists();
-   
   }, []);
 
   const handleWindowResize = () => {
@@ -122,7 +127,22 @@ function App() {
               <ArtistsPage artists={artists} />
             </Route>
             <Route exact path="/artists/daddy-yankee">
-              <DaddyYankee />
+              <ArtistComponent
+                name="Daddy Yankee"
+                igFollowers="44 M"
+                ytFollowers="33,9 M"
+                spotyFollowers="15,6 M"
+                ytLink="https://www.youtube.com/channel/UC9TO_oo4c_LrOiKNaY6aysA"
+                igLink="https://www.instagram.com/daddyyankee/?hl=es"
+                spotyLink="https://open.spotify.com/artist/4VMYDCV2IEDYJArk749S6m"
+                urlHero={
+                  breakpoint
+                    ? require("./assets/img/daddy-desktop.jpg")
+                    : require("./assets/img/daddy-mobile.jpg")
+                }
+                images={imagesDaddy}
+                biography={biographyDaddy}
+              />
             </Route>
             <Route exact path="/artists/nengo-flow">
               <ÑengoFlow />
@@ -142,90 +162,197 @@ function App() {
                 urlHero={
                   breakpoint
                     ? require("./assets/img/delaghetto.png")
-                    : require("./assets/img/delaghetto-mobile.png")
+                    : require("./assets/img/dela-mobile.jpg")
                 }
                 images={delaGeezy}
                 biography={bioDela}
               />
             </Route>
             <Route exact path="/artists/zion-lennox">
-              <ArtistComponent name="Zion & Lennox"
-              ytLink="https://www.youtube.com/channel/UCyInsLK0iu7xYvKmOKIZe8w"
-              ytFollowers="3,1 M"
-              igFollowers="3,4 M"
-              igLink="https://www.instagram.com/zionylennox/?hl=es"
-              spotyLink="https://open.spotify.com/artist/21451j1KhjAiaYKflxBjr1"
-              spotyFollowers="18,5 M"
-              urlHero={
-                breakpoint
-                  ? require("./assets/img/zyl-desktop.jpg")
-                  : require("./assets/img/zyl-mobile.jpg")   
-              }
-              images={imagesZyL}
-              biography={biographyZyL}/>
+              <ArtistComponent
+                name="Zion & Lennox"
+                ytLink="https://www.youtube.com/channel/UCyInsLK0iu7xYvKmOKIZe8w"
+                ytFollowers="3,1 M"
+                igFollowers="3,4 M"
+                igLink="https://www.instagram.com/zionylennox/?hl=es"
+                spotyLink="https://open.spotify.com/artist/21451j1KhjAiaYKflxBjr1"
+                spotyFollowers="18,5 M"
+                urlHero={
+                  breakpoint
+                    ? require("./assets/img/zyl-desktop.jpg")
+                    : require("./assets/img/zyl-mobile.jpg")
+                }
+                images={null}
+                biography={biographyZyL}
+              />
             </Route>
             <Route exact path="/artists/sasha-sobhani">
-              <ArtistComponent 
-              name="Sasha"
-              igFollowers="2,6 M"
-              igLink="https://www.instagram.com/sashazob/?hl=es"
-              ytFollowers="13,1 K"
-              ytLink="https://www.youtube.com/channel/UCuAEbcCYXvkHtiXTDNxXjkg"
-              spotyLink="https://open.spotify.com/artist/6bHULWQ9CCRWuRshc0gfzD"
-              spotyFollowers="3,4 K"
-              images={imagesSasha}
-              biography={biographySasha}
-              urlHero={
-                breakpoint
-                  ? require("./assets/img/sasha-desktop.jpg")
-                  : require("./assets/img/sasha-mobile.jpg")   
-              }
-               />
+              <ArtistComponent
+                name="Sasha"
+                igFollowers="2,6 M"
+                igLink="https://www.instagram.com/sashazob/?hl=es"
+                ytFollowers="13,1 K"
+                ytLink="https://www.youtube.com/channel/UCuAEbcCYXvkHtiXTDNxXjkg"
+                spotyLink="https://open.spotify.com/artist/6bHULWQ9CCRWuRshc0gfzD"
+                spotyFollowers="3,4 K"
+                images={imagesSasha}
+                biography={biographySasha}
+                urlHero={
+                  breakpoint
+                    ? require("./assets/img/sasha-desktop.jpg")
+                    : require("./assets/img/sasha-mobile.jpg")
+                }
+              />
             </Route>
             <Route exact path="/artists/rkm-keny">
-              <ArtistComponent 
-              name="Rakim & Ken-Y"
-              igFollowers="752 K"
-              igLink="https://www.instagram.com/rkmykeny/?hl=es"
-              ytFollowers="709 K"
-              ytLink="https://www.youtube.com/channel/UCcA4ZpNHrs4fEJG9xCc3B8g"
-              spotyFollowers="3 M"
-              spotyLink="https://open.spotify.com/artist/3jFjgKOGfVLWfXX8q5wrsg"
-              images={bioRkm}
-              biography={imagesRkm}
-              urlHero={
-                breakpoint
-                  ? require("./assets/img/sasha-desktop.jpg")
-                  : require("./assets/img/sasha-mobile.jpg")   
-              }
-               />
+              <ArtistComponent
+                name="Rakim & Ken-Y"
+                igFollowers="752 K"
+                igLink="https://www.instagram.com/rkmykeny/?hl=es"
+                ytFollowers="709 K"
+                ytLink="https://www.youtube.com/channel/UCcA4ZpNHrs4fEJG9xCc3B8g"
+                spotyFollowers="3 M"
+                spotyLink="https://open.spotify.com/artist/3jFjgKOGfVLWfXX8q5wrsg"
+                images={null}
+                biography={bioRkm}
+                urlHero={
+                  breakpoint
+                    ? require("./assets/img/rkm-desktop.jpg")
+                    : require("./assets/img/rkm-mobile.jpg")
+                }
+              />
+            </Route>
+            <Route exact path="/artists/peter-nieto">
+              <ArtistComponent
+                name="Peter Nieto"
+                igFollowers="29,7 K"
+                igLink="https://www.instagram.com/peternietomusic/?hl=es"
+                ytFollowers="6,1 K"
+                ytLink="https://www.youtube.com/channel/UCVdC5F2JnFhiUpKIR_i9h_g"
+                spotyFollowers="10,3 K"
+                spotyLink="https://open.spotify.com/artist/3awr6bI2IAMghTMbzv4Pi6"
+                images={null}
+                biography={bioPeter}
+                urlHero={
+                  breakpoint
+                    ? require("./assets/img/peter-desktop.jpg")
+                    : require("./assets/img/peter-mobile.jpg")
+                }
+              />
+            </Route>
+            <Route exact path="/artists/ivy-queen">
+              <ArtistComponent
+                name="Ivy Queen"
+                igFollowers="3,1 M"
+                igLink="https://www.instagram.com/ivyqueendiva/?hl=es-la"
+                ytFollowers="853 K"
+                ytLink="https://www.youtube.com/channel/UCabtU2G5Iqx3PsiSLtPHxZQ"
+                spotyFollowers="4,3 M"
+                spotyLink="https://open.spotify.com/artist/5bWUlnPx9OYKsLiUJrhCA1"
+                images={null}
+                biography={bioIvy}
+                urlHero={
+                  breakpoint
+                    ? require("./assets/img/ivy-desktop.jpg")
+                    : require("./assets/img/ivy-mobile.jpg")
+                }
+              />
+            </Route>
+            <Route exact path="/artists/jon-z">
+              <ArtistComponent
+                name="Jon-Z"
+                igFollowers="5,3 M"
+                igLink="https://www.instagram.com/jonzmen/?hl=es-la"
+                ytFollowers="6,08 M"
+                ytLink="https://www.youtube.com/channel/UCoXewWGlEiCK5G2iGxWXdKA"
+                spotyFollowers="4,7 M"
+                spotyLink="https://open.spotify.com/artist/5bWUlnPx9OYKsLiUJrhCA1"
+                images={null}
+                biography={bioJonz}
+                urlHero={
+                  breakpoint
+                    ? require("./assets/img/jonz-desktop.jpg")
+                    : require("./assets/img/jonz-mobile.jpg")
+                }
+              />
+            </Route>
+            <Route exact path="/artists/guayna">
+              <ArtistComponent
+                name="Guaynaa"
+                igFollowers="5,9 M"
+                igLink="https://www.instagram.com/guaynaa/?hl=es-la"
+                ytFollowers="3,32 M"
+                ytLink="https://www.youtube.com/channel/UCMCiKO21-niWqCIW4LA170w"
+                spotyFollowers="9,7 M"
+                spotyLink="https://open.spotify.com/artist/0BqURncJM5B1BBu7UM51eq"
+                images={null}
+                biography={bioGuaynaa}
+                urlHero={
+                  breakpoint
+                    ? require("./assets/img/guaynaa-desktop.jpg")
+                    : require("./assets/img/guaynaa-mobile.jpg")
+                }
+              />
+            </Route>
+            <Route exact path="/artists/chencho-corleone">
+              <ArtistComponent
+                name="Chencho Corleone"
+                igFollowers="2,1 M"
+                igLink="https://www.instagram.com/chenchocorleone/?hl=es-la"
+                ytFollowers="612 K"
+                ytLink="https://www.youtube.com/channel/UCTStLchCIe1xO-y1Oi1lruQ"
+                spotyFollowers="22,8 M"
+                spotyLink="https://open.spotify.com/artist/37230BxxYs9ksS7OkZw3IU"
+                images={imagesChencho}
+                biography={bioChencho}
+                urlHero={
+                  breakpoint
+                    ? require("./assets/img/chencho-desktop.jpg")
+                    : require("./assets/img/chencho-mobile.jpg")
+                }
+              />
+            </Route>
+            <Route exact path="/artists/ovi">
+              <ArtistComponent
+                name="OVI"
+                igFollowers="2,2 M"
+                igLink="https://www.instagram.com/ovi_oficial/?hl=es-la"
+                ytFollowers="6,66 M"
+                ytLink="https://www.youtube.com/c/RanchoHumildeoficial"
+                spotyFollowers="4,6 M"
+                spotyLink="https://open.spotify.com/artist/4o0NtnL2m0lzZmEdRas1qv"
+                images={null}
+                biography={bioOvi}
+                urlHero={
+                  breakpoint
+                    ? require("./assets/img/ovi-desktop.jpg")
+                    : require("./assets/img/ovi-mobile.jpg")
+                }
+              />
             </Route>
             <Route exact path="/vip">
               <VipPage />
             </Route>
-
           </Switch>
         </Suspense>
 
         <WhatsappBtn />
         <Footer />
 
-        {getCookieConsentValue === true ? null : (
-          <CookieConsent
-            debug={true}
-            buttonText="Acepto"
-            style={{ background: "#383838" }}
-            buttonStyle={{ color: "black", fontSize: "12px" }}
-            enableDeclineButton
-            hideOnAccept={true}
-            visible="byCookieValue"
-            expires={150}
-            declineButtonText="No acepto"
-          >
-            Este sitio web usa cookies. Revisa la política de privacidad para
-            mayor información.
-          </CookieConsent>
-        )}
+        <CookieConsent
+          debug={true}
+          buttonText="Acepto"
+          style={{ background: "#383838" }}
+          buttonStyle={{ color: "black", fontSize: "12px" }}
+          enableDeclineButton
+          hideOnAccept={true}
+          visible="byCookieValue"
+          expires={150}
+          declineButtonText="No acepto"
+        >
+          Este sitio web usa cookies. Revisa la política de privacidad para
+          mayor información.
+        </CookieConsent>
       </div>
     </Router>
   );

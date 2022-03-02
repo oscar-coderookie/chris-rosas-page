@@ -1,12 +1,9 @@
 import React from "react";
 import { ArtistsBio, GalleryArtists, SocialBar } from "../../components";
 import "./ÑengoFlow.scss";
-import { pagina1, pagina2, pagina3, images, bioNengo } from "../../mocks/ñengo";
-
+import {  images, bioNengo } from "../../mocks/ñengo";
 
 const ÑengoFlow = () => {
-
-  
 
   return (
     <div className="ñengo-block">
@@ -20,9 +17,9 @@ const ÑengoFlow = () => {
           igLink="https://www.instagram.com/nengoflowofficial/?hl=es"
           spotyLink="https://open.spotify.com/artist/12vb80Km0Ew53ABfJOepVz"
         />
-        <div className="ñengo-gallery">
+        
           <GalleryArtists images={images} />
-        </div>
+
       </div>
       <ArtistsBio
         name="Ñengo Flow"
