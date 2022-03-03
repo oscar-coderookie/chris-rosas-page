@@ -10,7 +10,26 @@ const bioIvy = [
     }
 ];
 
-const imagesIvy = []; 
+const imagesIvy = [
+    {
+        original: "https://eldiariony.com/wp-content/uploads/sites/2/2022/01/9791-IVYQUEEN-lamusa2019-18-e1642871782648.jpg?quality=60&strip=all&w=1200"
+    },
+    {
+        original: "https://s3.amazonaws.com/prod-wp-tvc/wp-content/uploads/2021/05/principal_ivy_queen.jpg"
+    },
+    {
+        original: "https://imagenes.milenio.com/jFvSrO3qcerI4Hen5IUZ32v-4yE=/936x566/https://www.milenio.com/uploads/media/2021/10/13/ivy-queen-homenajeada-premios-latin_0_0_1200_747.jpg"
+    },
+    {
+        original: "https://files.lafm.com.co/assets/public/styles/i_a_750x375/public/2019-08/ivy-queen.jpg?JmpsfLIvOLTztUgBzt5whW63TXtfutzM&itok=01IPP1ba"
+    },
+    {
+        original: "https://billboard.com.ar/wp-content/uploads/2020/05/ivyqueen-900x596.jpg"
+    },
+    {
+        original: "https://www.aldianews.com/sites/default/files/articles/ivy-queenaldianews.jpg"
+    }
+]; 
 
 export{ imagesIvy, bioIvy };
 

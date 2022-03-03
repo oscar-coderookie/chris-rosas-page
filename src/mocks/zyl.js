@@ -12,20 +12,18 @@ const biographyZyL = [
 
 const imagesZyL = [
   {
-    original: " ",
+    original: "https://www.poshmagazine.net/wp-content/uploads/2016/05/2-Zion-Lennox-performing-at-a-private-pop-up-concert-in-Miami-hosted-by-Buchanans-Blended-Scotch-Whisky-and-Warner-Music-Latina-for-influencers-VIPs-and-a-select-number-of-fans-1170x780.jpg ",
   },
   {
-    original: " ",
+    original: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F21%2F2019%2F04%2Fgettyimages-511247890.jpg",
   },
   {
-    original: " ",
+    original: "https://i0.wp.com/www.ernestojerardo.com/wp-content/uploads/2021/12/ZL001.jpg",
   },
   {
-    original: " ",
+    original: "https://i.ytimg.com/vi/pgsvT0ZJPH4/maxresdefault.jpg ",
   },
-  {
-    original: " ",
-  },
+
 ];
 
 export { biographyZyL, imagesZyL };

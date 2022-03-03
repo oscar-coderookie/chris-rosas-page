@@ -133,6 +133,7 @@ const MenuMobile = () => {
                 alt="vip-icon"
                 className="menu-mobile__icon-vip"
               />
+              VIP Services
             </NavLink>
           </div>
           <TraductionFlags/>

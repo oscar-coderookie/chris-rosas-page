@@ -34,8 +34,10 @@
             margin-top: 10px;
             transition: all .2s ease;
             margin-bottom: 10px;
+            animation: lighting  3s infinite;
+        
             &:hover{
-                animation: neon 3s infinite;
+                animation: none;
             }
         }
     }

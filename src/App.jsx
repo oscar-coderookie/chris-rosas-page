@@ -1,12 +1,10 @@
 import React, { useState, useEffect, Suspense } from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { db } from "./config/firebase";
-import { getDocs, collection, orderBy, query } from "firebase/firestore/lite";
+import {ErrorBoundary} from 'react-error-boundary'
 import HomePage from "./pages/HomePage/HomePage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import ArtistsPage from "./pages/Artists/ArtistsPage";
-import DaddyYankee from "./pages/DaddyYankee/DaddyYankee";
 import ÑengoFlow from "./pages/ÑengoFlow/ÑengoFlow";
 import NattiNatasha from "./pages/NattiNatasha/NattiNatasha";
 import Bio from "./pages/Bio/Bio";
@@ -17,7 +15,6 @@ import {
   images as delaGeezy,
   biography as bioDela,
 } from "./mocks/delaghetto.js";
-
 import {
   Header,
   MenuMobile,
@@ -26,8 +23,8 @@ import {
   WhatsappBtn,
   Footer,
   ArtistComponent,
+  CookieConsentComponent,
 } from "./components";
-import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 //**imports of slides images: */
 import natti from "./assets/img/events/natti-big-poster.jpg";
 import daddy from "./assets/img/events/daddy-event-big.jpg";
@@ -45,22 +42,19 @@ import { bioGuaynaa, imagesGuaynaa } from "./mocks/guaynaa";
 import { bioJonz, imagesJonz } from "./mocks/jonz";
 import { bioOvi, imagesOVI } from "./mocks/ovi";
 import { biographyDaddy, imagesDaddy } from "./mocks/daddy";
+import ScrollToTop from "./config/scroll";
+
+function ErrorHandler({error}) {
+  return (
+    <div role="alert">
+      <p>An error occurred:</p>
+      <pre>{error.message}</pre>
+    </div>
+  )
+}
 
 function App() {
   const [breakpoint, setBreakpoint] = useState(true);
-  const [artists, setArtists] = useState([]);
-
-  useEffect(() => {
-    const artistsCollectionRef = query(
-      collection(db, "artistas"),
-      orderBy("nombre", "desc")
-    );
-    const getArtists = async () => {
-      const data = await getDocs(artistsCollectionRef);
-      setArtists(data.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-    };
-    getArtists();
-  }, []);
 
   const handleWindowResize = () => {
     if (window.innerWidth > 425) {
@@ -83,7 +77,9 @@ function App() {
   }, []);
 
   return (
+    <ErrorBoundary FallbackComponent={ErrorHandler}>
     <Router>
+      <ScrollToTop />
       <div className="app">
         {!breakpoint ? <MenuMobile /> : null}
         {breakpoint ? <Header /> : null}
@@ -124,7 +120,7 @@ function App() {
               <EventsCarousel />
             </Route>
             <Route exact path="/artists">
-              <ArtistsPage artists={artists} />
+              <ArtistsPage />
             </Route>
             <Route exact path="/artists/daddy-yankee">
               <ArtistComponent
@@ -182,7 +178,7 @@ function App() {
                     ? require("./assets/img/zyl-desktop.jpg")
                     : require("./assets/img/zyl-mobile.jpg")
                 }
-                images={null}
+                images={imagesZyL}
                 biography={biographyZyL}
               />
             </Route>
@@ -213,7 +209,7 @@ function App() {
                 ytLink="https://www.youtube.com/channel/UCcA4ZpNHrs4fEJG9xCc3B8g"
                 spotyFollowers="3 M"
                 spotyLink="https://open.spotify.com/artist/3jFjgKOGfVLWfXX8q5wrsg"
-                images={null}
+                images={imagesRkm}
                 biography={bioRkm}
                 urlHero={
                   breakpoint
@@ -231,7 +227,7 @@ function App() {
                 ytLink="https://www.youtube.com/channel/UCVdC5F2JnFhiUpKIR_i9h_g"
                 spotyFollowers="10,3 K"
                 spotyLink="https://open.spotify.com/artist/3awr6bI2IAMghTMbzv4Pi6"
-                images={null}
+                images={imagesPeter}
                 biography={bioPeter}
                 urlHero={
                   breakpoint
@@ -249,7 +245,7 @@ function App() {
                 ytLink="https://www.youtube.com/channel/UCabtU2G5Iqx3PsiSLtPHxZQ"
                 spotyFollowers="4,3 M"
                 spotyLink="https://open.spotify.com/artist/5bWUlnPx9OYKsLiUJrhCA1"
-                images={null}
+                images={imagesIvy}
                 biography={bioIvy}
                 urlHero={
                   breakpoint
@@ -267,7 +263,7 @@ function App() {
                 ytLink="https://www.youtube.com/channel/UCoXewWGlEiCK5G2iGxWXdKA"
                 spotyFollowers="4,7 M"
                 spotyLink="https://open.spotify.com/artist/5bWUlnPx9OYKsLiUJrhCA1"
-                images={null}
+                images={imagesJonz}
                 biography={bioJonz}
                 urlHero={
                   breakpoint
@@ -285,7 +281,7 @@ function App() {
                 ytLink="https://www.youtube.com/channel/UCMCiKO21-niWqCIW4LA170w"
                 spotyFollowers="9,7 M"
                 spotyLink="https://open.spotify.com/artist/0BqURncJM5B1BBu7UM51eq"
-                images={null}
+                images={imagesGuaynaa}
                 biography={bioGuaynaa}
                 urlHero={
                   breakpoint
@@ -321,7 +317,7 @@ function App() {
                 ytLink="https://www.youtube.com/c/RanchoHumildeoficial"
                 spotyFollowers="4,6 M"
                 spotyLink="https://open.spotify.com/artist/4o0NtnL2m0lzZmEdRas1qv"
-                images={null}
+                images={imagesOVI}
                 biography={bioOvi}
                 urlHero={
                   breakpoint
@@ -335,26 +331,12 @@ function App() {
             </Route>
           </Switch>
         </Suspense>
-
+        <CookieConsentComponent />
         <WhatsappBtn />
         <Footer />
-
-        <CookieConsent
-          debug={true}
-          buttonText="Acepto"
-          style={{ background: "#383838" }}
-          buttonStyle={{ color: "black", fontSize: "12px" }}
-          enableDeclineButton
-          hideOnAccept={true}
-          visible="byCookieValue"
-          expires={150}
-          declineButtonText="No acepto"
-        >
-          Este sitio web usa cookies. Revisa la política de privacidad para
-          mayor información.
-        </CookieConsent>
       </div>
     </Router>
+    </ErrorBoundary>
   );
 }
 

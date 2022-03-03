@@ -60,7 +60,7 @@ const Header = () => {
           <img src={vipIcon} className="header__icon-vip" alt="home-icon" />
         </NavLink>
       </nav>
-      {ubication === "/" ? null : <TraductionFlags />}
+      
     </div>
   );
 };

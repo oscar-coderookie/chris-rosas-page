@@ -1,8 +1,16 @@
-import React from 'react';
-import './SpinnerLoader.scss';
+import React from "react";
+import "./SpinnerLoader.scss";
 
 const SpinnerLoader = () => {
-  return <div className='spinner'></div>;
+  return(
+    <React.Fragment>
+    <div className="spinner"></div>
+    <p>Cargando...</p>
+    </React.Fragment>
+  )
+  
+    
+  
 };
 
 export default SpinnerLoader;

@@ -17,13 +17,10 @@ const ArtistComponent = ({
 biography
 }) => {
 
-  console.log(images);
   return (
     <div className="artist-block">
-  
     <img src={urlHero} alt={urlHero} className="artist-hero" />
   
-      
       <div className="artist-bio">
         <SocialBar
           igFollowers={igFollowers}
@@ -36,11 +33,12 @@ biography
        { images === null ? null : <div className="artist-gallery">
         <GalleryArtists images={images} />
         </div>}
-      </div>
-      <ArtistsBio
+        <ArtistsBio
         name={name}
         biography={biography}
       />
+      </div>
+     
     </div>
   );
 };

@@ -13,6 +13,25 @@ const bioGuaynaa = [
     }
 ];
 
-const imagesGuaynaa = []; 
+const imagesGuaynaa = [
+    {
+        original: "https://www.latercera.com/resizer/IB3E2otFc0s9X9iVG5TVAt19AnI=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/KV5QRKLK6NFJLNU7I3JLRH7W5Y.jpg"
+    },
+    {
+        original: "https://www.hola.com/us/images/0269-125cefa1a33f-8f4b1ec6800c-1000/square-1200/lele-pons-y-guaynaa.webp"
+    },
+    {
+        original: "https://yt3.ggpht.com/NOmKnR4O_nqx1jrCApQMtfFNiEjRK6urmOILsJXAU4mU6IA7YMLzzF4wkHT44bHcen4-o7GlZA=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+        original: "https://i.pinimg.com/originals/26/40/fa/2640fab1ed0e78dae72004510a7956f7.jpg"
+    },
+    {
+        original: "https://imagenes.expreso.ec/files/image_700_402/uploads/2020/06/20/5eed9b5fab2f1.jpeg"
+    },
+    {
+        original: "https://robertoramasso.com/contrataciones/guaynaa.png"
+    },
+]; 
 
 export { bioGuaynaa, imagesGuaynaa };

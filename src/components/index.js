@@ -14,6 +14,7 @@ import WhatsappBtn from "./WhatsappBtn/WhatsappBtn";
 import Footer from "./Footer/Footer";
 import VipComponent from "./VipComponent/VipComponent";
 import ArtistComponent from "./ArtistComponent/ArtistComponent";
+import CookieConsentComponent from "./CookieConsent/CookieConsent";
 
 export {
   Header,
@@ -31,5 +32,6 @@ export {
   WhatsappBtn, 
   Footer, 
   VipComponent,
-  ArtistComponent
+  ArtistComponent,
+  CookieConsentComponent
 };

@@ -6,6 +6,7 @@
     padding-top: 40px;
     flex-direction: column;
     width: 100%;
+    overflow: hidden;
     &__title{
         font-size: 24px;
         text-transform: uppercase;
@@ -13,29 +14,24 @@
         font-weight: 500;
         color: #d3faff;
     }
-    &__text{
-        text-align: justify;
-        width: 80%;
-        color:#d3faff;
-        
-
-        @media (max-width: 475px) {
-            width: 100%;
-        }
-    }
+  
+}
+.bio-carousel{
+    width: 100%;
 }
 
 .bio-paragraph{
     text-align: justify;
     color:#d3faff;
-    width: 80%;
+    width: 90%;
     padding-bottom: 10px;
+    
 }
 .bio-slide{
     display: flex;
+    align-items: center;
     justify-content: center;
     height: auto;
-    width: 100%;
     margin-bottom: 10px;
 
     @media (max-width: 475px) {

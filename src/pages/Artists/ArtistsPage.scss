@@ -5,6 +5,7 @@
     background-size: cover;
     flex-direction: column;
     justify-content: center;
+    background-attachment: fixed;
     align-items: center;
     padding-bottom: 60px;
 
@@ -31,9 +32,9 @@
     &__img-container{
         overflow: hidden;
         margin: 20px 10px;
-        width: 280px;
+        width: 250px;
         object-position: center;
-        height: 300px;
+        height: 250px;
         border: 4px double rgb(174, 216, 255);
         filter: drop-shadow(0px 0px 6px rgb(200, 247, 255));
         cursor: pointer;
@@ -69,8 +70,8 @@
     }
 
     &__img{
-        width: 400px;
-        object-position: -60px;
+        height: 100%;
+        object-fit: cover;
     }
 
     @media (max-width: 1024px) {
@@ -78,16 +79,20 @@
         padding-bottom: 60px;
     }
     @media (max-width: 425px) {
-           background-attachment:fixed;
+            background-attachment:fixed;
             padding-top: 60px;
-            padding-bottom: 20px;
+            height: 100%;
+            overflow: scroll;
         &__title{
             margin-bottom: 0;
         }
         &__container{
-            margin-bottom: 60px;
+        
             margin-top: 0;
         }
+       &__img-container{
+           width: 250px;
+       }
     }
 }
 
@@ -99,4 +104,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 425px) {
+        height:100vh ;
+        
+    }
 }
