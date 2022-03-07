@@ -19,7 +19,11 @@ biography
 
   return (
     <div className="artist-block">
+
+    <div className="artist-hero">
     <img src={urlHero} alt={urlHero} className="artist-hero" />
+    </div>
+    
   
       <div className="artist-bio">
         <SocialBar

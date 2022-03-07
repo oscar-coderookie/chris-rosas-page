@@ -15,6 +15,7 @@ import Footer from "./Footer/Footer";
 import VipComponent from "./VipComponent/VipComponent";
 import ArtistComponent from "./ArtistComponent/ArtistComponent";
 import CookieConsentComponent from "./CookieConsent/CookieConsent";
+import ComingSoon from "./ComingSoon/ComingSoon";
 
 export {
   Header,
@@ -33,5 +34,6 @@ export {
   Footer, 
   VipComponent,
   ArtistComponent,
-  CookieConsentComponent
+  CookieConsentComponent,
+  ComingSoon
 };

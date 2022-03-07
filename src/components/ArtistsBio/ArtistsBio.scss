@@ -17,13 +17,14 @@
   
 }
 .bio-carousel{
-    width: 100%;
+    width: 80%;
+    margin: 0px 0px 20px 0px;
 }
 
 .bio-paragraph{
     text-align: justify;
     color:#d3faff;
-    width: 90%;
+    width: 1200px;
     padding-bottom: 10px;
     
 }
@@ -37,7 +38,4 @@
     @media (max-width: 475px) {
         height: auto;
     }
-}
-.bio-carousel{
-    margin: 0px 0px 20px 0px;
 }

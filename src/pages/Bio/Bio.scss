@@ -24,6 +24,7 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+        margin: 20px 0px;
     }
     &-text{
         width: 450px;
@@ -33,6 +34,7 @@
     }
     &-image{
         width: 320px;
+        filter: drop-shadow(0px 0px 6px white);
         img{
             width: 100%;
         }
@@ -41,8 +43,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between ;
-        width: 60vw;
-        padding-bottom: 60px;
+        width:800px;
+        padding-bottom: 40px;
 
         img{
             width: 80px;
@@ -59,6 +61,7 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            width: 80%;
             justify-content: center;
             margin-bottom: 10px;
             img{

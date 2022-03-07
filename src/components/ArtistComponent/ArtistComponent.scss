@@ -8,8 +8,14 @@
   }
   &-hero{
     width: 100%;
+    height: calc(100vh + 80px);
     background-size: cover;
     background-position: center;
+
+    img{
+      object-position: center;
+      object-fit: cover;
+    }
 
   }
   &-bio{
@@ -28,6 +34,7 @@
     height: 100vh;
     &-hero{
       width: 100vw;
+      height: 100vh;
       
     }
   }

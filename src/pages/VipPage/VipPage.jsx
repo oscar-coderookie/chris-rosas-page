@@ -1,7 +1,6 @@
 import React from "react";
 import "./VipPage.scss";
 import { NavLink } from "react-router-dom";
-import { withRouter } from "react-router-dom/cjs/react-router-dom.min";
 
 const linksHeaderVip = [
   { link: "Criptoworld", route: "/vip/criptoworld" },

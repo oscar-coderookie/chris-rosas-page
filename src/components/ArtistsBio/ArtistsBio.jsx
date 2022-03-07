@@ -6,7 +6,13 @@ import NeonBanner from "../../components/NeonBanner/NeonBanner";
 
 const Biography = ({ biography }) => {
   return (
-    <Carousel className="bio-carousel" showStatus={false} infiniteLoop={true}  >
+    <Carousel
+      className="bio-carousel"
+      showStatus={false}
+      infiniteLoop={true}
+      showThumbs={false}
+      renderThumbs={false}
+    >
       {biography.map((bio, index) => {
         return (
           <div className="bio-slide" key={index}>
