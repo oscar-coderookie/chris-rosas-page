@@ -1,0 +1,23 @@
+{
+    "counts": [
+        {
+            "id": "001",
+            "label": "Seguidores Instagram",
+            "number": "56000000",
+            "duration": "3"
+        },
+        {
+            "id": "002",
+            "label": "Audiencia Youtube",
+            "number": "125000000",
+            "duration": "3"
+        },
+        {
+            "id": "001",
+            "label": "Audiencia Spotify",
+            "number": "69000000",
+            "duration": "3"
+        }
+    ]
+    
+}

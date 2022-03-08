@@ -1,55 +1,70 @@
-.homepage{
-    overflow:hidden;
+.homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  &-hero {
+    overflow: hidden;
     height: calc(100vh - 80px);
     width: 100%;
     display: flex;
-    background: url('../../assets/img/background-neon-2.jpg');
+    background: url("../../assets/img/background-neon-2.jpg");
+    background-attachment: fixed;
     background-size: cover;
     align-items: center;
     justify-content: center;
-
-
-    &__video{
-        width: 100%;
-        
-    }
-    &__logo{
-        width: 600px;
-        animation: bright infinite 4s; 
-    }
-
-    @keyframes bright {
-
-        0%{
-            filter: drop-shadow(0px 0px 0px white);
-            opacity: 0;
-        }
-        50%{
-            filter: drop-shadow(0px 0px 10px white);
-            opacity: 1;
-        }
-        100%{
-            filter: drop-shadow(0px 0px 0px white);
-            opacity: 0;
-        }
-        
-    }
     @media (max-width: 768px) {
-        height: calc(100vh - 60px);
-        background: url('../../assets/img/bkg_home_mobile.jpg');
-        background-position: center;
-        background-size: cover;
-
-        &__logo{
-            width: 80%;
-        }
-
-        &__video{
-            width: 550px;
-            transform: translateY(-30px)
-        }
+      height: calc(100vh - 60px);
+      background: url("../../assets/img/bkg_home_mobile.jpg");
+      background-position: center;
+      background-size: cover;
     }
     @media (max-width: 475px) {
-        height: 100vh;
+      height: 100vh;
     }
+  }
+
+
+  &__logo {
+    width: 600px;
+    animation: bright infinite 4s;
+  }
+  &__counter{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: black;
+  }
+
+
+
+ 
+  @media (max-width: 768px) {
+
+    &__logo {
+      width: 80%;
+    }
+
+    &__video {
+      width: 550px;
+      transform: translateY(-30px);
+    }
+  }
+
 }
+@keyframes bright {
+    0% {
+      filter: drop-shadow(0px 0px 0px white);
+      opacity: 0;
+    }
+    50% {
+      filter: drop-shadow(0px 0px 10px white);
+      opacity: 1;
+    }
+    100% {
+      filter: drop-shadow(0px 0px 0px white);
+      opacity: 0;
+    }
+  }

@@ -16,6 +16,9 @@ import VipComponent from "./VipComponent/VipComponent";
 import ArtistComponent from "./ArtistComponent/ArtistComponent";
 import CookieConsentComponent from "./CookieConsent/CookieConsent";
 import ComingSoon from "./ComingSoon/ComingSoon";
+import CounterComponent from "./CounterComponent/CounterComponent";
+import SearchBar from "./SearchBar/SearchBar";
+import SectionFollowers from "./SectionFollowers/SectionFollowers";
 
 export {
   Header,
@@ -35,5 +38,8 @@ export {
   VipComponent,
   ArtistComponent,
   CookieConsentComponent,
-  ComingSoon
+  ComingSoon,
+  CounterComponent,
+  SearchBar,
+  SectionFollowers
 };

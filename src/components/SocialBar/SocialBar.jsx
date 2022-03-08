@@ -8,9 +8,10 @@ const SocialBar = ({
   spotyLink,
   ytLink,
   igLink,
+  onScroll
 }) => {
   return (
-    <div className="social-bar">
+    <div className="social-bar" onScroll={onScroll}>
       <h2 className="social-bar__title">Seguidores:</h2>
       <div className="social-bar__block">
         <div className="social-bar__element">
