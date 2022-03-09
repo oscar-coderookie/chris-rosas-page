@@ -19,6 +19,8 @@ import ComingSoon from "./ComingSoon/ComingSoon";
 import CounterComponent from "./CounterComponent/CounterComponent";
 import SearchBar from "./SearchBar/SearchBar";
 import SectionFollowers from "./SectionFollowers/SectionFollowers";
+import AnimatedStars from "./AnimatedStars/AnimatedStars"
+import Layout1 from "./Layouts/Layout1";
 
 export {
   Header,
@@ -41,5 +43,7 @@ export {
   ComingSoon,
   CounterComponent,
   SearchBar,
-  SectionFollowers
+  SectionFollowers,
+  AnimatedStars,
+  Layout1
 };

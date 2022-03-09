@@ -5,10 +5,21 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    transition: all .3s ease;
+    animation: fadeEffect 1s linear;
 
     &__img{
         width:100%;
         object-fit: cover;
         object-position: center;
+    }
+}
+
+@keyframes fadeEffect {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }

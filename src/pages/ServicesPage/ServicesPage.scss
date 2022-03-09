@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fadeEffect 1s linear;
 
     &__title{
         text-transform: uppercase;

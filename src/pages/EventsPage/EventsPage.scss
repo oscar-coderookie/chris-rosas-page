@@ -6,7 +6,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    animation: fadeEffect 1s linear;
+    
     &__banner{
         margin-top: 40px;
     }
