@@ -51,7 +51,7 @@ const MenuMobile = () => {
               {t("header.home")}
             </NavLink>
 
-            <NavLink
+            {/*<NavLink
               exact
               to="/bio"
               className="menu-mobile__links"
@@ -63,7 +63,7 @@ const MenuMobile = () => {
                 className="menu-mobile__icons"
               />
               {t("header.bio")}
-            </NavLink>
+      </NavLink>*/}
 
             <NavLink
               exact
@@ -136,7 +136,7 @@ const MenuMobile = () => {
               VIP Services
             </NavLink>
           </div>
-          <TraductionFlags/>
+          <TraductionFlags />
         </nav>
       )}
     </div>

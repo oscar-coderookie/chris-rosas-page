@@ -31,10 +31,12 @@ const Header = () => {
           {t("header.home")}
         </NavLink>
 
+        {/*
         <NavLink to="/bio" className="header__links">
           <img src={bioIcon} className="header__icons" alt="home-icon" />
           {t("header.bio")}
         </NavLink>
+      */}
 
         <NavLink to="/services" className="header__links">
           <img src={servicesIcon} className="header__icons" alt="home-icon" />
@@ -60,7 +62,6 @@ const Header = () => {
           <img src={vipIcon} className="header__icon-vip" alt="home-icon" />
         </NavLink>
       </nav>
-      
     </div>
   );
 };
