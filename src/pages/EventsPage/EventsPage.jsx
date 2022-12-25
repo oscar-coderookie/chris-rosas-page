@@ -4,10 +4,8 @@ import { NeonBanner } from "../../components";
 import "./EventsPage.scss";
 
 const yearsCalendar = [
-  { year: "2019", link: "/events/2019" },
-  { year: "2020", link: "/events/2020" },
-  { year: "2021" , link: "/events/2021"},
-  { year: "2022" , link: "/events/2022"},
+  
+  { year: "2020", link: "/events/2020"}
 ];
 
 const IconCalendar = () => {
