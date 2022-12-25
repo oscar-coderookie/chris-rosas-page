@@ -18,6 +18,10 @@
     }
 
   }
+  &-gallery{
+    width: 60%;
+    overflow: hidden;
+  }
   &-bio{
     background: url(./../../assets/img/background-neon-2.jpg);
     background-attachment: fixed;

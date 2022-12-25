@@ -10,23 +10,17 @@ const bioJonz = [
 const imagesJonz = [
 
     {
-        original: "https://yt3.ggpht.com/mUkmAW7oFgFG29UmoyxMqaH-s1YfkS8K4WHwfGYxzoj8QgfBXmHv-bZtLCEBevKIMenG7up67cs=s900-c-k-c0x00ffffff-no-rj"
+        original: "https://firebasestorage.googleapis.com/v0/b/chris-rosas-web.appspot.com/o/artistas%2FJON-Z%2FJon-Z-continua-aventurandose-a-nuevos-sonidos-819x1024.jpg?alt=media&token=1aef51d5-8ef9-487a-813d-49ba4f7ab055"
     },
     {
-        original: "https://i.pinimg.com/originals/d2/2b/6f/d22b6f5ed69fbe0ede0035568a6fa05b.jpg"
+        original: "https://firebasestorage.googleapis.com/v0/b/chris-rosas-web.appspot.com/o/artistas%2FJON-Z%2FSuper_Jon_Z_on_Instagram.jpg?alt=media&token=b18ca8e0-9519-4bcd-8ddb-53a6ff39ec01"
     },
     {
-        original: "https://rosemarynews.com/wp-content/uploads/sites/55/2021/01/Jon-Z-696x928.jpg"
+        original: "https://firebasestorage.googleapis.com/v0/b/chris-rosas-web.appspot.com/o/artistas%2FJON-Z%2Fb471158e83416917806826f07d13ce00.jpg?alt=media&token=899f3a8f-ccee-4b63-a82e-7ba76bfccb7b"
     },
     {
-        original: "https://scontent.feoh1-1.fna.fbcdn.net/v/t39.30808-6/274707669_568216714672815_3662510690125349408_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeEWYTmtnVdgSj2yVp6jRwNAHFeBpZH2n2YcV4GlkfafZv5hnK1ljtKIKIIGYNeE2vvOybXjRPASU_Vqqv5vPSqz&_nc_ohc=GDZo4D2IUn4AX8J8fFv&_nc_ht=scontent.feoh1-1.fna&oh=00_AT_x38zu6ggUIbTXGtXUufn1q_bl7rA6SMwG8mcRZxuMDw&oe=6224A4A1"
-    },
-    {
-        original: "https://scontent.feoh1-1.fna.fbcdn.net/v/t39.30808-6/274720033_568216711339482_280939290463983583_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeFWnupnB_EBZKT3NrYDm6fpJJB3nazUg58kkHedrNSDn7KL3HFl78ih94Cx1g7q_paOUscOI7Io3OsyztAQXAyY&_nc_ohc=Si9aA8K1xqUAX9zOrMo&tn=guVddQgtpT0Ejdot&_nc_ht=scontent.feoh1-1.fna&oh=00_AT_WF4ob0mSWftOooYhg61uKDITGYVWDoN55BT9mROytUA&oe=6223E443"
-    },
-    {
-        original: "https://scontent.feoh1-1.fna.fbcdn.net/v/t39.30808-6/274218745_565175461643607_3744976948589315473_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeG0qWgUKCtuxSf1TiobglIKu4Cpw3Z_KKG7gKnDdn8ooXtc60AMzwxrrKUxySGZG3diFzAtHfpPh43EnrrOOmQd&_nc_ohc=LEuSu6Z0muYAX-pcRsD&_nc_ht=scontent.feoh1-1.fna&oh=00_AT8tIJaxfBPAogPy4mfbaoGLPeDQodJAppjvWfVg595SmQ&oe=622403CD"
-    },
+        original: "https://firebasestorage.googleapis.com/v0/b/chris-rosas-web.appspot.com/o/artistas%2FJON-Z%2Frss-efe1c9051868013f131c15b1b907eb27e6629f26d64w.jpg?alt=media&token=6d24bece-6617-4d9c-9259-2e71cc8aa524"
+    }
 ]; 
 
 export { bioJonz, imagesJonz };

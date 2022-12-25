@@ -6,7 +6,7 @@ const GalleryArtists = ({ images }) => {
 
 
   return (
-    <ImageGallery
+    <ImageGallery className="gallery-artists"
       items={images}
       disableThumbnailScroll={true}
       showThumbnails={false}
