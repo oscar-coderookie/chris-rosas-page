@@ -21,6 +21,7 @@ import SearchBar from "./SearchBar/SearchBar";
 import SectionFollowers from "./SectionFollowers/SectionFollowers";
 import AnimatedStars from "./AnimatedStars/AnimatedStars"
 import Layout1 from "./Layouts/Layout1";
+import ComingSoonPage from "./ComingSoonPage/ComingSoon";
 
 export {
   Header,
@@ -45,5 +46,6 @@ export {
   SearchBar,
   SectionFollowers,
   AnimatedStars,
-  Layout1
+  Layout1,
+  ComingSoonPage
 };

@@ -107,7 +107,7 @@ function App() {
                 <EventsPage />
               </Route>
               <Route exact path="/events/2019">
-                <EventsCarousel />
+                <ComingSoon/>
               </Route>
               <Route exact path="/events/2020">
                 <EventsCarousel
@@ -120,10 +120,10 @@ function App() {
                 />
               </Route>
               <Route exact path="/events/2021">
-                <EventsCarousel />
+              <ComingSoon/>
               </Route>
               <Route exact path="/events/2022">
-                <EventsCarousel />
+              <ComingSoon/>
               </Route>
               <Route exact path="/artists">
                 <ArtistsPage />
