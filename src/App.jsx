@@ -5,7 +5,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import HomePage from "./pages/HomePage/HomePage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import ArtistsPage from "./pages/Artists/ArtistsPage";
-import ÑengoFlow from "./pages/ÑengoFlow/ÑengoFlow";
+import NengoFlow from "./pages/NengoFlow/NengoFlow";
 import NattiNatasha from "./pages/NattiNatasha/NattiNatasha";
 import Bio from "./pages/Bio/Bio";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
@@ -147,7 +147,7 @@ function App() {
                 />
               </Route>
               <Route exact path="/artists/nengo-flow">
-                <ÑengoFlow />
+                <NengoFlow />
               </Route>
               <Route exact path="/artists/natti-natasha">
                 <NattiNatasha />
