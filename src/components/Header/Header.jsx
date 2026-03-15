@@ -30,14 +30,6 @@ const Header = () => {
           <img src={homeIcon} className="header__icons" alt="home-icon" />
           {t("header.home")}
         </NavLink>
-
-        {/*
-        <NavLink to="/bio" className="header__links">
-          <img src={bioIcon} className="header__icons" alt="home-icon" />
-          {t("header.bio")}
-        </NavLink>
-      */}
-
         <NavLink to="/services" className="header__links">
           <img src={servicesIcon} className="header__icons" alt="home-icon" />
           {t("header.services")}
@@ -48,10 +40,10 @@ const Header = () => {
           {t("header.artists")}
         </NavLink>
 
-        <NavLink to="/events" className="header__links">
+        {/* <NavLink to="/events" className="header__links">
           <img src={eventsIcon} className="header__icons" alt="home-icon" />
           {t("header.events")}
-        </NavLink>
+        </NavLink> */}
 
         <NavLink to="/contact" className="header__links">
           <img src={contactIcon} className="header__icons" alt="home-icon" />

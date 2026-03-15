@@ -2,10 +2,9 @@
   &-block {
     display: flex;
     background: url("./../../assets/img/background-neon.jpg");
-    height: 100vh;
+    height: calc(100vh - 80px);
     overflow: hidden;
-    
- 
+
     @media (max-width: 480px) {
       height: 100vh;
     }
@@ -29,13 +28,14 @@
     font-size: 48px;
   }
   &-image {
-    object-fit: cover;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    transform: translateY(-200px);
   }
   @media (max-width: 960px) {
-    &-slide{
+    &-slide {
       height: 100vh;
-
     }
     &-image {
       height: 100%;

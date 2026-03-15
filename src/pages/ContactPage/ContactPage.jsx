@@ -15,7 +15,7 @@ const ContactPage = () => {
       <div className="contact-page__info">
         <div className="contact-page__email">
           <h4>{t("contact-page.legend")}</h4>
-          <a href="mailto:chris@chrisrosas.com">
+          <a href="mailto:team@chrisrosas.com">
             <span className="fas fa-envelope-open-text"></span>{" "}
           </a>
           <p>{t("contact-page.email")}</p>

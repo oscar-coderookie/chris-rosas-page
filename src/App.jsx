@@ -35,8 +35,8 @@ import nattiMobile from "./assets/img/events/natti-little-poster.jpg";
 import daddyMobile from "./assets/img/events/daddy-yankee-poster-little.jpg";
 import nengoMobile from "./assets/img/events/nengo-little-poster.jpg";
 import ImgSupercars from "./assets/img/vip/home-supercars.jpg";
-import Aviation from "./assets/img/vip/home-aviacion.jpg";
-import PropertiesImg from "./assets/img/vip/home-properties.jpg";
+import Aviation from "./assets/img/vip/aviacion.png";
+import PropertiesImg from "./assets/img/vip/propiedades.png";
 import { biographyZyL, imagesZyL } from "./mocks/zyl";
 import { imagesSasha, biographySasha } from "./mocks/sasha";
 import { bioRkm, imagesRkm } from "./mocks/rakim-keny";
@@ -339,10 +339,10 @@ function App() {
                 <ComingSoon />
               </Route>
               <Route exact path="/vip/aviation">
-                <ComingSoon urlIMG={Aviation} />
+                <ComingSoon urlIMG={Aviation} title="Aviación" />
               </Route>
               <Route exact path="/vip/properties">
-                <ComingSoon urlIMG={PropertiesImg} />
+                <ComingSoon urlIMG={PropertiesImg} title="Propiedades" />
               </Route>
               <Route exact path="/vip/experiences">
                 <ComingSoon />

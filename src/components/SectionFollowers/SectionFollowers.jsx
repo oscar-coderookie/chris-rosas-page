@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./SectionFollowers.scss";
-import AnimatedNumbers from "react-animated-numbers";
 import NeonBanner from "../NeonBanner/NeonBanner";
 import AnimatedStars from "../AnimatedStars/AnimatedStars";
 
@@ -25,37 +24,28 @@ const SectionFollowers = () => {
     <div className="section-followers">
       <AnimatedStars />
       <div className="section-followers__bar">
-        <NeonBanner title="Audiencia en plataformas digitales:" />
+        <NeonBanner title="Arquitectos del éxito en la escena urbana global. Más de dos décadas elevando el prestigio de las figuras que dominan las plataformas digitales." />
         <div className="section-followers__block">
           <div className="section-followers__social">
             <span className="section-followers__icon fab fa-instagram"></span>
-            <AnimatedNumbers
-              animateToNumber={counter.Instagram}
-              fontStyle={{ fontSize: 40 }}
-            />
-          
           </div>
           <div className="section-followers__social">
             <span className="section-followers__icon fab fa-youtube"></span>
-            <AnimatedNumbers
-              animateToNumber={counter.YouTube}
-              fontStyle={{ fontSize: 40 }}
-            />
-    
+
           </div>
           <div className="section-followers__social">
             <span className="section-followers__icon fab fa-spotify"></span>
-            <AnimatedNumbers
-              animateToNumber={counter.Spotify}
-              fontStyle={{ fontSize: 40 }}
-            />
-  
           </div>
-          
+          <div className="section-followers__social">
+            <span className="section-followers__icon fab fa-tiktok"></span>
+          </div>
+            <div className="section-followers__social">
+            <span className="section-followers__icon fab fa-apple"></span>
+          </div>
         </div>
-        <h3 className="section-followers__title">Millones de Usuarios</h3>
+        <h3 className="section-followers__title">+5 Billones de Usuarios</h3>
         <p className="section-followers__legend">
-          "Manejamos los artistas del género urbano con más trayectoria y experiencia, las redes sociales lo avalan"
+          Tenemos relación con los artistas del género urbano con más trayectoria y experiencia, las redes sociales lo avalan
         </p>
       </div>
     </div>

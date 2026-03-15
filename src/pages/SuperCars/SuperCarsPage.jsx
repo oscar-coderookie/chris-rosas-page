@@ -5,29 +5,26 @@ import { Carousel } from "react-responsive-carousel";
 
 const carsImages = [
   { name: "Lamborghini Urus",
-    imageURL: "https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_gw/urus/2021/09_21/gallery_gateway_urus_01.jpg",
+    imageURL: "https://hips.hearstapps.com/hmg-prod/images/lamborghini-urus-se-1-662915ed8958c.jpg?crop=0.793xw:0.667xh;0.142xw,0.230xh",
     prize: "1,2M"
   },
   { name: "Lamborghini Huracán",
-    imageURL: "https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/huracan/evo_rwd_spyder/2021/06_22/Gallery/rwd_spyder_03.jpg ",
+    imageURL: "https://www.diariomotor.com/imagenes/2019/02/lamborghini-huracan-evo-spyder-0219-016.jpg?class=XL",
     prize: "1,5M"
   },
   { name: "Lamborghini Aventador",
-    imageURL: "https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/aventador/s/2021/restyle_03_05/gallery/aven_s_03.jpg",
+    imageURL: "https://www.topgear.com/sites/default/files/cars-car/image/2017/01/aventador-s_green_050.jpg",
     prize: "900K"
   },
   { name: "Porsche Panamera",
-    imageURL: "https://files.porsche.com/filestore/image/multimedia/none/model-series-g2-2nd-panamera-intro/preview/a0519320-d30a-11ea-80cc-005056bbdc38;sP;twebp/porsche-preview.webp",
+    imageURL: "https://fuelcarmagazine.com/wp-content/uploads/2019/10/P19_0813_a3_rgb.jpg",
     prize: "600K"
   },
   { name: "Audi SQ7",
-    imageURL: "https://www.audi.es/dam/nemo/es/modelos/q7/SQ7_eos_2020/Audi_frontal_sq7_1920x1080_230719-2.png?imwidth=1439",
+    imageURL: "https://uploads.audi-mediacenter.com/system/production/media/122707/images/a9812b653e470a50b69c94be646c244361878d52/A240629_web_1920.jpg?1706257200",
     prize: "600K"
   },
-  { name: "TESLA Model X",
-    imageURL: "https://tesla-cdn.thron.com/delivery/public/image/tesla/8c26f779-11e5-4cfc-bd7c-dcd03b18ff88/bvlatuR/std/4096x2561/Model-X-Main-Hero-Desktop-LHD",
-    prize: "600K"
-  },
+
 ]
 
 const carsmini = [
@@ -51,9 +48,7 @@ const carsmini = [
     imageURL: "https://firebasestorage.googleapis.com/v0/b/chris-rosas-web.appspot.com/o/coches%2Fmobile%2Fsq7.png?alt=media&token=3f630758-5e92-4563-b79c-991adc184e70",
     prize: "600K"
   },
-  { name: "TESLA Model X",
-    imageURL: "https://firebasestorage.googleapis.com/v0/b/chris-rosas-web.appspot.com/o/coches%2Fmobile%2Ftesla-model-x.png?alt=media&token=8c1a1ec1-e2e6-4497-839b-cab946a9b957"
-  },
+
 ]
 const SuperCarsPage = () => {
   const [breakpoint, setBreakpoint] = useState(true);

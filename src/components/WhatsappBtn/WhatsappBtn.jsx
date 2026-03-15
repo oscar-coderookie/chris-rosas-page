@@ -1,16 +1,16 @@
 import React from "react";
 import './WhatsappBtn.scss';
-import whatsappLogo from "./../../assets/img/whatsapp-logo.svg"
+import phoneLogo from "./../../assets/img/button-chat.png"
 
 const WhatsappBtn = () => {
   return (
     <React.Fragment>
       <a
-        href="https://api.whatsapp.com/send?phone=+34722355841"
+        href="https://api.whatsapp.com/send?phone=+17868489893"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img className="whatsapp" src={whatsappLogo} alt="whatsapp" />
+        <img className="whatsapp" src={phoneLogo} alt="whatsapp" />
       </a>
     </React.Fragment>
   );

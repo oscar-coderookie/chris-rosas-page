@@ -21,48 +21,65 @@ const ArtistsPage = () => {
   useEffect(() => {
     const artistsCollectionRef = query(
       collection(db, "artistas"),
-      orderBy("nombre", "desc")
+      orderBy("order", "asc")
     );
+
     const getArtists = async () => {
-      const data = await getDocs(artistsCollectionRef);
-      setArtists(data.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      try {
+        const data = await getDocs(artistsCollectionRef);
+
+        const artistsData = data.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+        setArtists(artistsData);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching artists:", error);
+        setLoading(false);
+      }
     };
-    getArtists().then(() => {
-      setLoading(false);
-    });
+
+    getArtists();
   }, []);
+
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
   };
 
-  const filteredArtists = artists.filter((artist) => artist.nombre.toLowerCase().includes(search.toLowerCase()) )
+  const filteredArtists = artists.filter((artist) =>
+    (artist.nombre || "").toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <React.Fragment>
-    {loading ? <LoadingScreen/> :<div className="artists-page">
-      <NeonBanner title="Artistas" />
-      <SearchBar handleSearch={handleSearch}/>
-       <div className="artists-page__container">
-      
-        {filteredArtists.map((artist) => {
-          return (
-            <NavLink to={`/artists/${artist.id}`} key={artist.nombre}>
-              <div className="artists-page__img-container">
-                <img
-                  src={artist.avatar}
-                  alt={artist.nombre}
-                  className="artists-page__img"
-                />
-                <h2 className="artists-page__img-legend">{artist.nombre}</h2>
-              </div>
-            </NavLink>
-          );
-        })}
-      </div>
-    </div>}
+      {loading ? <LoadingScreen /> : <div className="artists-page">
+        <NeonBanner title="Artistas" />
+        <p className="artists-page__subtitle">"Tu conexión directa con la élite urbana. Gestionamos la contratación y logística de los artistas más influyentes para tu próximo evento, tour o campaña global."</p>
+        <SearchBar handleSearch={handleSearch} />
+        <div className="artists-page__container">
+
+          {filteredArtists.map((artist) => {
+            return (
+              <NavLink to={`/artists/${artist.id}`} key={artist.id}>
+                <div className="artists-page__img-container">
+                  <img
+                    src={artist.avatar}
+                    alt={artist.nombre}
+                    className="artists-page__img"
+                  />
+                  <h2 className="artists-page__img-legend">{artist.nombre}</h2>
+                </div>
+              </NavLink>
+            );
+          })}
+        </div>
+        <p className="artists-page__subtitle">"Si el artista que buscas no está en esta selección, nuestra red global permite gestionar la contratación de cualquier figura de primer nivel."</p>
+      </div>}
     </React.Fragment>
-    
+
   );
 };
 

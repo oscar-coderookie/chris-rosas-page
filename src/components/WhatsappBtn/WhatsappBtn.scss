@@ -1,5 +1,5 @@
 .whatsapp{
-    height:60px;
+    height:100px;
     position:fixed;
     bottom: 10px;
     right: 10px;
@@ -8,8 +8,7 @@
     z-index: 5;
     
     &:hover{
-      height: 65px;
-      
+      transform: scale(1.2);
     }
   }
   

@@ -2,7 +2,7 @@
 height:100vh; 
 display: flex;
 align-items: center;
-justify-content: space-evenly;
+justify-content: center;
 flex-direction: column;
 width: 100%;
     &__bar{
@@ -32,6 +32,7 @@ width: 100%;
     &__legend{
         margin: 0;
         width: 80%;
+        font-weight: 400;
     }
     &__icon{
         font-size: 60px;
@@ -41,7 +42,9 @@ width: 100%;
     }
     &__title{
         font-size: 40px;
-        margin-top: 0px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        animation: lighting infinite 4s;
     }
 
     @media (max-width: 425px) {
