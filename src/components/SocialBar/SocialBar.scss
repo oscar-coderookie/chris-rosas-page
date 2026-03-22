@@ -2,15 +2,38 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
-  margin: 30px 0px;
-  width: 80%;
+  justify-content: center;
+  margin: 30px 10px;
+  padding: 10px;
+  width: 600px;
+  height: 300px;
+  border-radius: 20px;
+  background: linear-gradient(
+    -45deg,
+    rgba(2, 4, 8, 1) 0%,
+    rgba(8, 20, 31, 1) 27%,
+    rgba(10, 28, 40, 1) 46%,
+    rgba(29, 79, 110, 1) 56%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  animation: shining 3s infinite;
 
-  &__title{
-      color: #d3faff;
-      text-transform: uppercase;
-      font-weight: 400;
-      margin-top: 0;
+  &__background {
+    background: url(../../assets/img/background-neon.jpg);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+  }
+
+  &__title {
+    color: #d3faff;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-top: 0;
   }
 
   &__block {
@@ -19,16 +42,17 @@
     display: flex;
     width: 60%;
 
-    @media (max-width: 675px) {
-        width: 100%;
-      }
+    @media (max-width: 1024px) {
+      width: 100%;
+      justify-content: space-around;
+    }
   }
   &__icon {
     font-size: 60px;
     color: #d3faff;
     filter: drop-shadow(0px 0px 6px #c0f8ff);
     transition: all 0.2s ease-in;
-    animation: shining 3s infinite ;
+    animation: shining 3s infinite;
 
     &:hover {
       filter: drop-shadow(0px 0px 18px #c0f8ff);
@@ -41,25 +65,28 @@
     font-size: 20px;
     text-align: center;
   }
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
 
   @media (max-width: 425px) {
-      &__icon{
-          font-size: 40px;
-      }
+    width: 300px;
+    &__icon {
+      font-size: 40px;
+    }
   }
- 
 }
 @keyframes shining {
   0% {
     filter: drop-shadow(0px 0px 6px #c0f8ff);
   }
-  25%{
+  25% {
     filter: drop-shadow(0px 0px 12px #c0f8ff);
   }
-  50%{
+  50% {
     filter: drop-shadow(0px 0px 6px #c0f8ff);
   }
-  75%{
+  75% {
     filter: drop-shadow(0px 0px 12px #c0f8ff);
   }
 }

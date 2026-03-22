@@ -1,0 +1,193 @@
+.artist-profile {
+  min-height: calc(100vh - 80px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+  animation: fadeEffect 0.8s ease-in;
+
+  &__overlay {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    height: 100vh;
+  }
+
+  &__header {
+    text-align: center;
+    background: url(../../assets/img/background-neon.jpg);
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__name {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: rgb(216, 235, 253);
+
+    text-shadow:
+      0 0 10px rgba(200, 247, 255, 0.5),
+      0 0 20px rgba(200, 247, 255, 0.4);
+  }
+
+  &__bio {
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.534);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: justify;
+    border-radius: 20px;
+  }
+
+  &__paragraph {
+    font-size: 18px;
+    line-height: 1.8;
+
+    margin-bottom: 22px;
+
+    font-weight: 300;
+
+    color: rgb(230, 240, 255);
+  }
+
+  &__loading {
+    height: calc(100vh - 80px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 1024px) {
+    &__overlay {
+      height: auto;
+    }
+    &__name{
+      font-size: 24px;
+    }
+  }
+}
+
+.artist-video-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // 🔥 Fondo urbano degradado
+  background: linear-gradient(
+    135deg,
+    #0a0a0a 0%,
+    #111827 40%,
+    #1a0033 70%,
+    #000000 100%
+  );
+
+  overflow: hidden;
+}
+
+// 🔥 Glow animado (detalle PRO)
+.artist-video-section::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #00f2ea55, transparent 70%);
+  top: -100px;
+  left: -100px;
+  filter: blur(80px);
+}
+
+.artist-video-section::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #ff00aa33, transparent 70%);
+  bottom: -100px;
+  right: -100px;
+  filter: blur(80px);
+}
+
+// Contenido
+.video-container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+// Título
+.video-title {
+  color: #fff;
+  font-size: 28px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+// Caja del video
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; // 16:9
+  border-radius: 20px;
+  overflow: hidden;
+
+  // Glass effect
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow:
+    0 0 20px rgba(0, 242, 234, 0.2),
+    0 0 40px rgba(255, 0, 170, 0.1);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+// 📱 Responsive fino (no básico)
+@media (max-width: 768px) {
+  .artist-video-section {
+    padding: 60px 15px;
+  }
+
+  .video-title {
+    font-size: 22px;
+  }
+
+  .video-wrapper {
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-title {
+    font-size: 18px;
+  }
+}

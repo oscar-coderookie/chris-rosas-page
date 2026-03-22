@@ -21,8 +21,8 @@ const Header = () => {
   return (
     <div className={ubication === "/" ? "header__clean" : "header"}>
       {ubication === "/" ? null : (
-        <div className="header__logo">
-          <img src={logo} alt="logo-chris" />
+        <div className="header__container-logo">
+          <img className="header__logo" src={logo} alt="logo-chris" />
         </div>
       )}
       <nav className="header__nav">

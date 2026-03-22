@@ -3,7 +3,7 @@ import "./ArtistsPage.scss";
 import { NavLink } from "react-router-dom";
 import { NeonBanner, SearchBar, SpinnerLoader } from "../../components";
 import { db } from "../../config/firebase";
-import { getDocs, collection, orderBy, query } from "firebase/firestore/lite";
+import { getDocs, collection, orderBy, query } from "firebase/firestore";
 
 const LoadingScreen = () => {
   return (
